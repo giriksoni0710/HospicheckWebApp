@@ -16,7 +16,8 @@ success= false;
     this.messageForm = this.formbuilder.group({
 
       name: ['',Validators.required],
-message: ['', Validators.required]
+message: ['', Validators.required],
+email: ['',Validators.required]
     })
 
    }
