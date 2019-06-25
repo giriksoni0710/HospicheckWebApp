@@ -7,7 +7,7 @@ header {
 
         img{
             max-width:100%;
-            min-width:170px;
+            min-width:200px;
             height:auto;
         }
     }
@@ -15,62 +15,39 @@ header {
     .container{
         display:flex;
         flex-flow:row wrap;
+        @media screen and (min-width:640px){
+            display:grid;
+            grid-template-columns: 0.5fr 1fr;
+        }
         a.logo{
             flex-basis:100%;
             text-align:center;
+            @media screen and (min-width:640px){
+                text-align:initial;
+            }
         }
         nav{
-            // flex:1 0 25%;
             width:100%;
             ul{
                 list-style-type: none;
                 display:flex;
+                flex-flow:row nowrap;
                 padding:0;
+                @media screen and (min-width:640px){
+                    padding-top:0.3rem;
+                    justify-content: flex-end;
+                }
                 margin-bottom:0;
                 justify-content: space-evenly;
                 li {
+                    @media screen and (min-width:640px){
+                       padding-left:2rem; 
+                    }
                     a{
-                    color:blue;
+                    color:#70f;
                     }
                 }
             }
         }
     }   
-
-    // .container{
-    //     display:grid;
-    //     grid-template-columns: .5fr 1.5fr;
-
-    //     a{
-    //         place-self:center;
-    //     }
-
-    //     nav {
-    //         // justify-self: center;
-    //         // place-self:center;
-    //         // flex-flow:row nowrap;
-    //         // align-items:center;
-    //         ul {
-    //             list-style-type: none;
-    //             margin: 0;
-    //             padding: 0;
-    //             display:flex;
-    //             flex:row nowrap;
-    //             // justify-content:space-around;
-    //             li {
-    //                 // float: left;
-    //                 flex-grow: 1;
-    //                 a {
-    //                     // padding: 1.5em;
-    //                     // text-transform: uppercase;
-    //                     // font-size: .8em;
-    //                     color: blue;
-    //                     // &:hover {
-    //                     //     background: #8E2BFF;
-    //                     // }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
 }
