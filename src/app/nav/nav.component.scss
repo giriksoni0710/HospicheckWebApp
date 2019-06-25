@@ -15,14 +15,14 @@ header {
     .container{
         display:flex;
         flex-flow:row wrap;
-        @media screen and (min-width:640px){
+        @media screen and (min-width:647px){
             display:grid;
             grid-template-columns: 0.5fr 1fr;
         }
         a.logo{
             flex-basis:100%;
             text-align:center;
-            @media screen and (min-width:640px){
+            @media screen and (min-width:647px){
                 text-align:initial;
             }
         }
@@ -33,14 +33,14 @@ header {
                 display:flex;
                 flex-flow:row nowrap;
                 padding:0;
-                @media screen and (min-width:640px){
+                @media screen and (min-width:647px){
                     padding-top:0.3rem;
                     justify-content: flex-end;
                 }
                 margin-bottom:0;
                 justify-content: space-evenly;
                 li {
-                    @media screen and (min-width:640px){
+                    @media screen and (min-width:647px){
                        padding-left:2rem; 
                     }
                     a{
