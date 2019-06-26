@@ -1,11 +1,17 @@
-<h1>Contact us</h1>
-
+<div class= "intro">
+<h5>GOT A QUESTION ?</h5>
+<h2>Contact Hospicheck</h2>
+<p>We’re here to help and answer any queson you might have.
+  We look forward to hearing from you.
+  </p>
+</div>
 <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
 
-    <h5 *ngIf="success">Your form is valid!</h5>
+    <h5 *ngIf="success"> <strong>Thankyou  for contacting us <span>{{ messageForm.controls.name.value }}.</span> We will get back to you on {{ messageForm.controls.email.value }} within 24hrs.</strong>
+    </h5>
 
     <label>
-      Name:
+      Name<sup > *Required</sup>
       <input type="text" formControlName="name">
       <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
         <div *ngIf="messageForm.controls.name.errors.required">*Your name is required</div>
@@ -13,29 +19,27 @@
     </label>
 
     <label>
-      Email:
-      <textarea formControlName="email"></textarea>
+      Email<sup > *Required</sup>
+      <textarea class= 'box box1' formControlName="email"></textarea>
       <div *ngIf="submitted && messageForm.controls.email.errors" class="error">
         <div *ngIf="messageForm.controls.email.errors.required">*A message is required</div>
       </div>
     </label>
 
     <label>
-      Message:
-      <textarea formControlName="message"></textarea>
+      Message<sup > *Required</sup>
+      <textarea class= 'box box2' formControlName="message"></textarea>
       <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
         <div *ngIf="messageForm.controls.message.errors.required">*A message is required</div>
       </div>
     </label>
+<div style="text-align: center;">
+    <input type="submit" value="Send message" class="cta" >
+  </div>
+  <!-- <div *ngIf="submitted" class="results">
+    <strong>Thankyou <span>{{ messageForm.controls.name.value }} for contacting us.</span></strong>
 
-    <input type="submit" value="Send message" class="cta">
+  </div> -->
 
   </form>
 
-  <div *ngIf="submitted" class="results">
-      <strong>Name:</strong>
-      <span>{{ messageForm.controls.name.value }}</span>
-
-      <strong>Message:</strong>
-      <span>{{ messageForm.controls.message.value }}</span>
-    </div>

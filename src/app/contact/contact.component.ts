@@ -30,8 +30,12 @@ if(this.messageForm.invalid){
   return;
 }
 
-this.success= true;
+else{
 
+  this.success= true;
+  this.messageForm.reset();
+
+}
 }
 
   ngOnInit() {
