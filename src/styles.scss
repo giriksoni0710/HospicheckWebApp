@@ -3,7 +3,8 @@
 
 body, html {
     height: 100%;
-    margin: 0 auto;
+    margin: 0;
+    padding:0;
 }
 
 body {
@@ -28,7 +29,7 @@ a {
 }
 
 section {
-    width: 80%;
-    margin: 0 auto;
-    padding: 2em;
+    width: 100%;
+    margin: 2rem auto;
+    // padding: 2em;
 }
