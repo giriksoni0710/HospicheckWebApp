@@ -33,9 +33,10 @@ if(this.messageForm.invalid){
 else{
 
   this.success= true;
-  this.messageForm.reset();
 
 }
+
+
 }
 
   ngOnInit() {
