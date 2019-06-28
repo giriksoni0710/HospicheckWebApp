@@ -24,7 +24,11 @@ label {
       font-size: .8em;
       margin-bottom: 20px;
   }
+input, textarea {
 
+margin-top: 3%;
+
+}
 input, .box {
 
 
@@ -150,7 +154,7 @@ margin: 2rem;
 
 form {
 
-margin: 1rem;
+
 
 padding: 4rem;
 
@@ -185,7 +189,6 @@ height: 30vh;
 @media only screen and (min-width: 950px){
   form {
 
-    margin: 1rem;
 
     padding: 6rem;
 
