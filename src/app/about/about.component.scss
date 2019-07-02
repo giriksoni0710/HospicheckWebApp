@@ -117,7 +117,7 @@
     width:100%;
     height:auto;
     background:#385398;
-    padding:1.2rem;
+    padding:1.2rem 1.2rem 0;
 
     .logo{
         img{
@@ -128,7 +128,7 @@
 
     .footer-menu-nav{
         ul{
-            padding:1.2rem;
+            padding:1.2rem 0.5rem;
             width:100%;
             list-style-type: none;
             display:flex;
@@ -144,16 +144,17 @@
         }
     }
     .subscribe{
-        padding: 0 1.2rem;
+        padding: 0 0.5rem;
         
         .label{
             font-size:.9em;
             margin-bottom:0;
+            color:#fff;
             
-            pre{
-                color:#fff;
-                margin-bottom:0;
-             }
+            // pre{
+            //     color:#fff;
+            //     margin-bottom:0;
+            //  }
         }
         input{
             width:100%;
@@ -169,6 +170,28 @@
             background:#22AD5F;
             border:none;
             color:#fff;
+        }
+    }
+    .social-links{
+        ul{
+            margin:0;
+            padding:1.2rem 0.5rem;
+            width:100%;
+            list-style-type: none;
+            display:flex;
+            flex-flow:row nowrap;
+
+            li{
+                color:#fff;
+                padding:0 1.2rem;
+                &:first-child{
+                    padding-left:0.3rem;
+                }
+            }
+        }
+        img{
+            max-width:100%;
+            height:auto;
         }
     }
 }
