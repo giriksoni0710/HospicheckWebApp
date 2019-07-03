@@ -20,12 +20,11 @@ text-align: center;
   .bannertext{
 
     color: white;
-    font-weight: bolder;
+    // font-weight: bolder;
     padding-top: 15%;
   }
 
   input[type="text"]{
-
     width: 87%;
     height: 40px;
     // box-shadow: 0 0.5px 2px 2px cyan;
@@ -33,7 +32,6 @@ text-align: center;
     margin-bottom: 0.5rem;
     border-radius: 5px;
     margin-left: 1rem;
-
   }
 
 
@@ -52,6 +50,16 @@ font-weight: bold;
 
   .radiobtntxt{
     color: white;
+    padding:0.6rem;
+  }
+  #search{
+    margin:1rem;
+    width:360px;
+    height:40px;
+    border-radius:5px;
+    background:#385398;
+    border:none;
+    color:#fff;
   }
 
 }
