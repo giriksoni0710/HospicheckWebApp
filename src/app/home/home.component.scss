@@ -25,12 +25,7 @@ text-align: center;
   }
 
   input[type="text"]{
-<<<<<<< HEAD
-    width: 360px;
-=======
-
     width: 87%;
->>>>>>> 544e6833a36435d9317165e55fa3ec86bc10facf
     height: 40px;
     // box-shadow: 0 0.5px 2px 2px cyan;
     outline: none;
@@ -55,6 +50,7 @@ font-weight: bold;
 
   .radiobtntxt{
     color: white;
+    padding:0.6rem;
   }
   #search{
     margin:1rem;
