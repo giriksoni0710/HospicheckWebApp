@@ -169,4 +169,30 @@
   }
 
 }
+.reviewCard2{
+  width:330px;
+  height:auto;
+  margin:0 auto 2rem;
+  box-shadow:0 4px 3px 3px #dcdcdc;
 
+  .reviewImg2{
+
+    width:320px;
+    height:190px;
+    margin:1rem 5px;
+    display:inline-block;
+    // background:green;
+    img{
+      max-width:100%;
+      // min-width:100%;
+      height: auto;
+    }
+  }
+  .reviewBody2{
+    width:300px;
+    height:auto;
+    // background:green;
+    display:inline-block;
+    margin:1rem 15px 2rem;
+  }
+}
