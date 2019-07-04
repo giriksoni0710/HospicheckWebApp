@@ -1,3 +1,6 @@
+*{
+  font-family: Lato, sans-serif;
+}
 .banner 
 {
   width: 100%;
@@ -96,5 +99,74 @@
   }
 
 }
+.reviewHeading{
+  text-align:center;
+  margin: 3.5rem 0;
 
+  h2,h6{
+    color:#385398;
+  }
+  h6{
+    letter-spacing: 2px;
+    line-height:1.4;
+  }
+}
+
+.reviewCard{
+  width:330px;
+  height:450px;
+  // background:Red;
+  // text-align:center;
+  margin:0 auto 2rem;
+  box-shadow:0 4px 3px 3px #dcdcdc;
+
+  .reviewImg{
+
+    width:100%;
+    height:190px;
+    // background:green;
+    img{
+      max-width:100%;
+      // min-width:100%;
+      height: auto;
+    }
+  }
+
+  .reviewFor{
+    width:30%;
+    height:auto;
+    // background:yellow;
+    margin:0.8rem 1rem;
+    font-size: 0.8em;
+  }
+  .hospClinicName{
+    width:85%;
+    height:auto;
+    margin:0.8rem 1rem;
+    // background:cyan;
+    color:#385398;
+    font-size:1.1em;
+  }
+  .ratings{
+    width:60%;
+    height:30px;
+    margin:0.8rem 1rem;
+    // background:orange;
+
+    img{
+      max-width:100%;
+      height:auto;
+    }
+  }
+  .reviewBody{
+    width:90%;
+    height:50px;
+    margin:0.8rem 1rem;
+    // background:hotpink;
+    overflow:hidden;
+    -webkit-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+  }
+
+}
 
