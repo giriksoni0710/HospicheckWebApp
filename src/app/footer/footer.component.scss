@@ -3,12 +3,25 @@
     height:auto;
     background:#385398;
     padding:1.2rem 1.2rem 0;
-    // margin-top:2rem;
-
+    @media screen and (min-width:900px)
+    {
+        text-align:center;
+    }
+    @media screen and (min-width:1200px)
+    {
+        display:grid;
+        grid-template-columns:0.5fr 1.3fr 1.2fr 0.5fr;
+    }
+    
     .logo{
         img{
             max-width:100%;
             height:auto;
+            padding-top: 0.5rem;
+            @media screen and (min-width:1300px)
+            {
+                padding-top: 0.4rem;
+            }
         }
     }
 
@@ -19,7 +32,12 @@
             list-style-type: none;
             display:flex;
             flex-flow:column nowrap;
-
+            @media screen and (min-width:1200px)
+            {
+                flex-flow:row nowrap;
+                justify-content:space-evenly;
+                padding-left: 35px;
+            }
             li{
                 color:#fff;
                 padding:0.3rem 0;
@@ -36,28 +54,42 @@
             font-size:.9em;
             margin-bottom:0;
             color:#fff;
-            
-            // pre{
-            //     color:#fff;
-            //     margin-bottom:0;
-            //  }
+            @media screen and (min-width:1200px)
+            {
+                padding-right:7.8rem;
+            }
         }
+
         input{
-            width:100%;
+            width:300px;
+            height:35px;
             border-radius:5px;
             font-size: 0.9em;
             padding:0.5rem;
         }
         button{
+            // display:block;
             margin-top:1rem;
-            width:200px;
-            height:45px;
+            @media screen and (min-width:900px)
+            {
+                margin:1rem auto;
+            }
+            @media screen and (min-width:1200px)
+            {
+                // margin: 1rem 0 1rem -6rem;
+                margin: 1rem 0 1rem -8rem;
+            }
+            // width:200px;
+            // height:45px;
+            width: 169px;
+            height: 35px;
             font-size:0.7em;
             background:#22AD5F;
             border:none;
             color:#fff;
         }
     }
+
     .social-links{
         ul{
             margin:0;
@@ -66,6 +98,10 @@
             list-style-type: none;
             display:flex;
             flex-flow:row nowrap;
+            @media screen and (min-width:900px)
+            {
+                justify-content: center;
+            }
 
             li{
                 color:#fff;
