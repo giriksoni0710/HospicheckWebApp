@@ -1,14 +1,25 @@
-<header>
-  <div class="container">
-    <a routerLink="/" class="logo">
-      <img src="./assets/img/logo.png" alt="Site Logo" width="200px">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+ crossorigin="anonymous">
+
+<header class="header">
+  <div class="logodiv">
+  <a routerLink="/" class="logo">
+      <img src="./assets/img/logo.png" alt="Site Logo" width="150px">
     </a>
-    <nav class="">
-      <ul class="">
+  </div>
+  <div class="mainmenu" >
+    <input class="menu-btn" type="checkbox" id="menu-btn" (click)="clickEvent()"
+    [ngClass]="status ? 'success' : 'danger'"/>
+    <label class="menu-icon" for="menu-btn" (click)="clickEvent()"
+    [ngClass]="status ? 'success' : 'danger'"><span class="navicon" ></span></label>
+    <ul class="menu">
         <li class=""><a routerLink="/">Home</a></li>
         <li class=""><a routerLink="/about">About</a></li>
         <li class=""><a routerLink="/contact">Contact us</a></li>
-      </ul>
-    </nav>
+
+    </ul>
   </div>
-</header>
+<div class="search">
+    <i class="fa fa-search"></i>
+  </div>
+  </header>

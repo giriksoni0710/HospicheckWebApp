@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AdvancedSearchComponent
   ],
   imports: [
     BrowserModule,
