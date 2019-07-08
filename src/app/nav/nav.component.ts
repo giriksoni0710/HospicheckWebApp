@@ -17,6 +17,7 @@ export class NavComponent implements OnInit {
 
  // Javascript way
 //  apptitle="Definite";
+ status: boolean = false;
 
 
   ngOnInit() {
@@ -24,13 +25,14 @@ export class NavComponent implements OnInit {
 
 
 
-    const status = false;
 
 
-    function clickEvent() {
-        this.status = !this.status;
-    }
 
+
+  }
+  clickEvent() {
+
+   this.status = !this.status;
 
   }
 

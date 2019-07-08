@@ -12,4 +12,10 @@ export class AdvancedSearchComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggle() {
+
+
+
+  }
+
 }

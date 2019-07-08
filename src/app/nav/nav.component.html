@@ -7,11 +7,10 @@
       <img src="./assets/img/logo.png" alt="Site Logo" width="150px">
     </a>
   </div>
-  <div class="mainmenu" >
-    <input class="menu-btn" type="checkbox" id="menu-btn" (click)="clickEvent()"
-    [ngClass]="status ? 'success' : 'danger'"/>
-    <label class="menu-icon" for="menu-btn" (click)="clickEvent()"
-    [ngClass]="status ? 'success' : 'danger'"><span class="navicon" ></span></label>
+  <div class="mainmenu" (click)="clickEvent()"
+  [ngClass]="status ? 'success' : 'danger'" style="z-index: 40;">
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+    <label class="menu-icon" for="menu-btn" ><span class="navicon" ></span></label>
     <ul class="menu">
         <li class=""><a routerLink="/">Home</a></li>
         <li class=""><a routerLink="/about">About</a></li>
