@@ -41,7 +41,7 @@ body{
         margin: 1rem 2rem 1rem 2rem;
         height: fit-content;
         justify-content: flex-end;
-        padding: 1.5rem 0 2.7rem 2rem;
+        padding: 1.5rem 1rem 2rem 1.5rem;
         box-shadow: 1px 1px 2px 3px lightgrey;
         text-align: center;
 
@@ -65,3 +65,56 @@ font-family: lato;
 
 
       }
+
+      .hospital-cards {
+
+        text-align: center;
+    margin: 3rem 2rem 3rem 2rem;
+    padding: 2.5rem;
+    box-shadow: 1px 1px 2px 3px lightgrey
+
+
+
+      }
+      .hospitalname {
+        color: blue;
+        font-weight: bold;
+      }
+
+      span {
+
+        font-size: 34px;
+        margin: 2rem 0 2rem 0.5rem;
+
+      }
+
+      .checked {
+
+        color: yellow;
+
+      }
+
+      i.fas.fa-phone {
+
+        margin: 1rem 6.4rem 1rem 1rem;
+      }
+
+        i.fas.fa-globe {
+
+          margin: 1rem 9rem 3rem 1rem;
+        }
+
+        .link {
+
+          margin-left: 1rem;
+        }
+
+        .buttoncompare {
+
+          padding: 0.7rem 3rem;
+          background-color: green;
+      font-family: lato;
+          color: white;
+          border-radius: 5%;
+
+        }
