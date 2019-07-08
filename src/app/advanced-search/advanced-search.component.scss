@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body{
+
+  background-color: slateblue;
+
+  font-family: Lato;
+}
+
+  .filter {
+
+    height: 40px;
+    background-color: white;
+    box-shadow: 1px 1px 2px 2px lightgrey;
+
+    margin: 1rem 2rem 1rem 2rem;
+    height: 40px;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    justify-content: flex-end;
+    padding: 1.5rem 0 2.7rem 2rem;
+
+  }
+
+  .display-results {
+
+    color: blue;
+    text-align: center;
+    margin: 3rem;
+
+    h4 {
+      font-weight: bold;
+
+       }
+      }
+
+
+      .comparediv {
+
+
+        margin: 1rem 2rem 1rem 2rem;
+        height: fit-content;
+        justify-content: flex-end;
+        padding: 1.5rem 0 2.7rem 2rem;
+        box-shadow: 1px 1px 2px 3px lightgrey;
+        text-align: center;
+
+          .compare-btn {
+
+            padding: 0.7rem 3rem;
+    background-color: green;
+font-family: lato;
+    color: white;
+    border-radius: 5%;
+          }
+          p {
+            font-size: 0.95rem;
+            font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-right: 1rem;
+  color: blue;
+  }
+
+
+
+      }
