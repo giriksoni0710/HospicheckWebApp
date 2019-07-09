@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
+import { SingleHospitalViewComponent } from './single-hospital-view/single-hospital-view.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { AdvancedSearchComponent } from './advanced-search/advanced-search.compo
     ContactComponent,
     HomeComponent,
     FooterComponent,
-    AdvancedSearchComponent
+    AdvancedSearchComponent,
+    SingleHospitalViewComponent
   ],
   imports: [
     BrowserModule,
