@@ -7,15 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvancedSearchComponent implements OnInit {
 
+boolean = false;
+
+  filtertoggle() {
+
+    this.boolean = !this.boolean;
+
+  }
   constructor() { }
 
   ngOnInit() {
-  }
-
-  toggle() {
 
 
 
   }
+
 
 }
