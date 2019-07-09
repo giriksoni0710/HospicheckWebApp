@@ -7,23 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvancedSearchComponent implements OnInit {
 
+
 boolean = false;
 
   filtertoggle() {
 
+    if (window.matchMedia('(min-width: 810px)')) {
+      this.boolean = true;
+    }
+
     this.boolean = !this.boolean;
 
   }
+
   constructor() { }
 
   ngOnInit() {
 
-    if (window.screen.width === 810) {
-
+    if (window.matchMedia('(min-width: 810px)')) {
       this.boolean = true;
     }
 
   }
-
 
 }
