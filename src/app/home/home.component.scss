@@ -2,82 +2,52 @@
 .banner
 {
   width: 100%;
-  height: 100vh;
-  // background-color:#385398;
-  // background: url("./assets/img/banner-logo-mobile.png");
-  // background-repeat:no-repeat;
-  text-align: center;
-
-  img{
-    max-width:100%;
-    height:auto;
-  }
-  .banner-logo-mobile{
-    width:100%;
-    height:100vh;
-    position: absolute;
-    top: 12.8%;
-    // top:24.3%;
-    // top:24.8%;
-    left:0;
-    z-index:2;
-  }
-  .transLayer{
-    width:100%;
-    height:100vh;
-    position: absolute;
-    top: 12.8%;
-    // top:24.3%;
-    // top:24.8%;
-    left:0;
-    z-index:3;
-    background:rgba(56,83,152,0.4);
-  }
+  height:660px;
+  background:url('/assets/img/landing-page-banner-image.png');
+  background-repeat: no-repeat;
+  background-position: center center;
 
   .searchdiv {
-    position:relative;
-    height: 51%;
-    // height: 60%;
-    width: 80%;
+    width:388px;
+    height: 362px;
     margin: 1rem auto 0;
     border-radius:8.23px;
     background-color: rgba(236,240,241,0.4);
     text-align: left;
-    z-index:4;
-    // margin-bottom:1rem;
-
   }
 
   .bannertext{
-
+    text-align:center;
     color: white;
-    // font-weight: bolder;
-    padding-top: 25%;
-    position:relative;
-    z-index:5;
+    padding-top: 100px;
   }
 
   input[type="text"]{
+    display:block;
+    margin:auto;
     width: 87%;
     height: 40px;
-    // box-shadow: 0 0.5px 2px 2px cyan;
+    box-shadow: 0 1px 5px 7px rgba(0, 0, 0, 0.1);
     outline: none;
     margin-bottom: 0.5rem;
     border-radius: 5px;
-    margin-left: 1rem;
     padding-left:0.5rem;
   }
 
   label{
-    margin:1.5rem 1rem 0;
+    margin: 0 1.7rem;
     color: white;
     &:nth-of-type(1){
       margin-top:3rem;
     }
   }
 
+  .city{
+    margin-top:1rem !important;
+  }
+
   input[type="radio"]{
-    margin:0 0 0 1rem;
+    margin:0 0 0 1.7rem;
   }
 
   .radiobtntxt{
@@ -85,7 +55,8 @@
     padding:0.6rem;
   }
   #searchBtn{
-    margin:1rem;
+    display:block;
+    margin:1rem auto;
     width:87%;
     height:40px;
     border-radius:5px;
@@ -110,65 +81,74 @@
   }
 }
 
-.reviewCard{
-  width:330px;
-  height:450px;
-  // background:Red;
-  // text-align:center;
-  margin:0 auto 2rem;
-  box-shadow:0 4px 3px 3px #dcdcdc;
 
-  .reviewImg{
+.reviewChild1{
 
-    width:100%;
-    height:190px;
-    // background:green;
-    img{
-      max-width:100%;
-      // min-width:100%;
-      height: auto;
+  display:flex;
+  flex-flow:row wrap;
+
+  .reviewCard{
+    width:330px;
+    height:450px;
+    // background:Red;
+    // text-align:center;
+    margin:0 auto 2rem;
+    box-shadow:0 4px 3px 3px #dcdcdc;
+
+    .reviewImg{
+
+      width:100%;
+      height:190px;
+      // background:green;
+      img{
+        max-width:100%;
+        min-width:100%;
+        height: auto;
+      }
     }
-  }
 
-  .reviewFor{
-    width:30%;
-    height:auto;
-    // background:yellow;
-    margin:0.8rem 1rem;
-    font-size: 0.8em;
-  }
-  .hospClinicName{
-    width:85%;
-    height:auto;
-    margin:0.8rem 1rem;
-    // background:cyan;
-    color:#385398;
-    font-size:1.1em;
-  }
-  .ratings{
-    width:60%;
-    height:30px;
-    margin:0.8rem 1rem;
-    // background:orange;
-
-    img{
-      max-width:100%;
+    .reviewFor{
+      width:30%;
       height:auto;
+      // background:yellow;
+      margin:0.8rem 1rem;
+      font-size: 0.8em;
     }
-  }
-  .reviewBody{
-    width:90%;
-    height:50px;
-    margin:0.8rem 1rem;
-    // background:hotpink;
-    overflow:hidden;
-    -webkit-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-  }
+    .hospClinicName{
+      width:85%;
+      height:auto;
+      margin:0.8rem 1rem;
+      // background:cyan;
+      color:#385398;
+      font-size:1.1em;
+    }
+    .ratings{
+      width:60%;
+      height:30px;
+      margin:0.8rem 1rem;
+      // background:orange;
 
+      img{
+        max-width:100%;
+        height:auto;
+      }
+    }
+    .reviewBody{
+      width:90%;
+      height:50px;
+      margin:0.8rem 1rem;
+      // background:hotpink;
+      overflow:hidden;
+      -webkit-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+
+  }
 }
+
 .reviewCard2{
-  width:330px;
+  // width:330px;
+  width: 68.05%;
   height:auto;
   margin:0 auto 2rem;
   box-shadow:0 4px 3px 3px #dcdcdc;
