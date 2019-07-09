@@ -1,6 +1,7 @@
 .hospdetailCard{
     margin:3rem auto;
-    width:330px;
+    // width:330px;
+    width:68.5%;
     height:auto;
     border-radius:5px;
     box-shadow:0 4px 3px 3px #dcdcdc;
@@ -20,7 +21,7 @@
     }
     .hospReviews{
         width:80%;
-        margin:0 3rem;
+        margin:0 2rem;
         display:flex;
         flex-flow:row nowrap;
         img{
@@ -35,7 +36,7 @@
     .hospBody{
         width:80%;
         height:auto;
-        margin: 2rem auto;
+        margin: 2rem;
         // padding:1rem;
     }
     .hospDetails{
@@ -46,11 +47,35 @@
         flex-flow:column nowrap;
         justify-content:center;
         align-items:center;
+        @media screen and (min-width:1000px)
+        {
+            display:grid;
+            grid-template-columns:1fr 1fr 1fr;
+        }
         div{
             width:100%;
             height:120px;
             border-bottom:1px solid black;
             padding: 2.2rem 4rem;
+            @media screen and (min-width:700px)
+            {
+                padding: 2.2rem 8rem;
+            }
+            @media screen and (min-width:900px)
+            {
+                padding: 2.2rem 13rem;
+            }
+            @media screen and (min-width:1000px)
+            {
+                padding:2rem 0;
+                border-right:1px solid black;
+                border-bottom:none;
+                &:last-child{
+                    border-right:none;
+                }
+                text-align:center;
+            }
+            
             text-align:left;
             &:nth-child(2),&:nth-child(3)
             {
@@ -77,6 +102,21 @@
             margin: 1.5rem 0 1rem;
             font-size: 0.9em;
             padding: 0 1rem;
+            @media screen and (min-width:1000px)
+            {
+                padding: 0 0.5rem;
+            }
+        }
+        @media screen and (min-width:700px)
+        {
+            text-align:center;
+        }
+        div{
+            @media screen and (min-width:1000px)
+            {
+                display:grid;
+                grid-template-columns:1fr 1fr 1fr;     
+            }
         }
     }
     .hospDepts{
@@ -95,17 +135,27 @@
         width:100%;
         display:grid;
         grid-template-columns:1fr 1fr;
-        grid-gap:1rem;
+        @media screen and (min-width:1000px)
+        {
+            display:flex;
+            flex-flow:row wrap;
+            padding:2rem;
+        }
         div{
             width:150px;
-            height:75px;
+            height:55px;
             font-size:0.8em;
-            border-radius: 75px / 37.5px;
+            border-radius: 37px;
             // line-height:50px;
             border:3px solid #385398;
             text-align:center;
             margin: 0 auto 2rem;
-            padding:1.5rem 0.5rem;
+            padding:1rem 0.5rem;
+            @media screen and (min-width:1000px)
+            {
+                flex-grow:1;
+                margin:1rem 0.2rem;
+            }
         }
     }
 }
