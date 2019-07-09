@@ -133,7 +133,7 @@ font-family: lato;
         }
 
         span {
-          font-size: 1.5rem;
+          font-size: 1.1rem;
 
         }
 
@@ -182,3 +182,114 @@ font-family: lato;
   background: #4CAF50;
   cursor: pointer;
 }
+
+@media (min-width: 680px ){
+
+  .filter {
+
+    max-width: 800px;
+
+  }
+
+}
+
+
+@media (min-width: 810px){
+
+  .filter {
+
+    max-width: 300px;
+    margin: 0.1rem 0 0 0;
+    min-width: 300px;
+
+  }
+
+  .type {
+
+    max-width: 300px;
+    margin-left: 0;
+
+  }
+
+  .maingrid {
+
+    display: grid;
+    grid-template-columns: .7fr 1.4fr;
+
+
+
+  }
+
+  .comparediv{
+  padding: 0.5rem 1rem 1rem 0.5rem;
+  margin: 0px 10rem 0 10rem;
+  }
+
+  .hospital-cards {
+    display: grid;
+
+  }
+
+  .difffilters {
+    min-width: 300px;
+  }
+
+  .hospitalname {
+    font-size: 1rem;
+
+  }
+
+  .hospital-cards {
+
+    font-size: 0.8rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 3rem 2rem 3rem 2rem;
+    padding: 2rem .5rem 0rem 1rem;
+
+  }
+
+  .details {
+
+    font-size: 0.8rem;
+  }
+
+  .buttoncompare {
+    padding: 0.3rem;
+  }
+
+  .starrating {
+
+    max-width: 10rem;
+  }
+
+  .cmpbtn {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    align-self: center;
+  }
+
+  .details {
+
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+    .fa.fa-star{
+
+      font-size: 0.8rem;
+
+    }
+
+    i.fas.fa-globe {
+      margin: 1rem 9rem 3rem 4rem;
+    }
+
+    i.fas.fa-phone {
+
+    margin: 1rem 6.4rem 1rem 3rem;
+    }
+
+
+  }
+
+

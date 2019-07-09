@@ -18,7 +18,10 @@ boolean = false;
 
   ngOnInit() {
 
+    if (window.screen.width === 810) {
 
+      this.boolean = true;
+    }
 
   }
 
