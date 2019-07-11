@@ -1,23 +1,24 @@
 
 <div class="banner">
-  <h2 class="bannertext" >Find the right hospital
-    <br> Get the best care</h2>
+  <!-- <h2 class="bannertext" >Find the right hospital
+    <br> Get the best care</h2> -->
+  <h2 class="bannertext" >{{query}}</h2>
 
   <div class="searchdiv">
 
     <div>
       <label for="SearchHospital"> Search hospitals, clinics or procedure </label>
-      <input type="text" id="searchinput">
+      <input type="text" id="searchinput" [(ngModel)]="query1">
     </div>
     <div>
       <label for="City" class="city"> Select City</label>
-      <input type="text"><br>
+      <input type="text" id="searchcity" [(ngModel)]="query2"><br>
     </div>
     <div>
       <input type="radio" value="Hospital" name="checked"> <span class="radiobtntxt">Hospital</span>
       <input type="radio" value="Walk In Clinic" name="checked"> <span class="radiobtntxt">Walk In Clinic</span>
     </div>
-    <button type="button" id="searchBtn">SEARCH</button>
+    <button type="button" id="searchBtn"(click)="post()">SEARCH</button>
   </div>
 
 </div>
