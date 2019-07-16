@@ -12,7 +12,14 @@
     </div>
     <div>
       <label for="City" class="city"> Select City</label>
-      <input type="text" id="searchcity" [(ngModel)]="query2"><br>
+      <!-- <input type="text" id="searchcity" [(ngModel)]="query2"><br> -->
+      <select name="city" id="searchcity" [(ngModel)]="query2">
+        <option value="all cities" selected>Select all</option>
+        <option value="Burnaby">Burnaby</option>
+        <option value="Vancouver">Vancouver</option>
+        <option value="Surrey">Surrey</option>
+        <option value="Richmond">Richmond</option>
+      </select>
     </div>
     <div>
       <input type="radio" value="Hospital" name="checked"> <span class="radiobtntxt">Hospital</span>
