@@ -208,6 +208,7 @@ font-family: lato;
 
     max-width: 300px;
     margin-left: 0;
+    margin-right: 0;
 
   }
 
@@ -232,6 +233,7 @@ font-family: lato;
 
   .difffilters {
     min-width: 300px;
+    display: block !important;
   }
 
   .hospitalname {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ResizedEvent } from 'angular-resize-event';
 
 @Component({
   selector: 'app-advanced-search',
@@ -8,26 +9,57 @@ import { Component, OnInit } from '@angular/core';
 export class AdvancedSearchComponent implements OnInit {
 
 
-boolean = false;
+
+showhide = false;
+
 
   filtertoggle() {
 
-    if (window.matchMedia('(min-width: 810px)')) {
-      this.boolean = true;
-    }
-
-    this.boolean = !this.boolean;
+    this.showhide = !this.showhide;
 
   }
 
-  constructor() { }
+
+  constructor() {
+
+
+
+   }
+
+  //  ngAfterViewInit () {
+
+
+  // }
+
+
+
 
   ngOnInit() {
 
-    if (window.matchMedia('(min-width: 810px)')) {
-      this.boolean = true;
-    }
+
+
+    if (window.matchMedia('(min-width: 810px)').matches) {
+
+    this.showhide = true;
+
+      }
 
   }
+
+
+// (window:resize) in frontend
+
+
+    // onResized(event: ResizedEvent) {
+
+    //   if (window.matchMedia(('min-width: 810px'))) {
+
+    //     this.boolean = true;
+
+    //   }
+
+    // }
+
+
 
 }
