@@ -1,36 +1,29 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
-query1 = "hello";
-query2 = "hello2";
+export class HomeComponent{
 
+  query1: String;
+  query2: String;
+  url:any;
+  postData: any;
 
-messages = [];
+  constructor(private http: HttpClient)
+  {
 
-  constructor(private http: HttpClient) {
-
-
+    this.query1 = '';
+    this.query2 = '';
+    this.url = "http://localhost:3000/searchQuery";
   }
-
-  ngOnInit() {
-
-
-
-
-}
-
-post() {
-
-  this.http.post('http://localhost:3000/searchQuery', { searchinput : this.query1, searchcity: this.query2}).toPromise();
-
-}
-
-
+    post(){
+      // console.log('post',this.message);
+       this.http.post(this.url,{searchinput:this.query1,searchcity:this.query2}).toPromise().then(data =>{
+        //  console.log(data);
+       });
+    }
 }
