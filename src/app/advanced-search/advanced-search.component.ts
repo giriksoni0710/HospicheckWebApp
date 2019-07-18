@@ -1,13 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, ViewChild } from '@angular/core';
 import { ResizedEvent } from 'angular-resize-event';
+import { HomeComponent } from '../home/home.component';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-advanced-search',
   templateUrl: './advanced-search.component.html',
   styleUrls: ['./advanced-search.component.scss']
 })
-export class AdvancedSearchComponent implements OnInit {
+export class AdvancedSearchComponent implements AfterViewInit {
 
+
+
+
+
+
+data: object;
 
 
 showhide = false;
@@ -17,11 +25,13 @@ showhide = false;
 
     this.showhide = !this.showhide;
 
+
   }
 
 
-  constructor() {
+  constructor(private http: HttpClient) {
 
+    // console.log(this.query2);
 
 
    }
@@ -33,8 +43,7 @@ showhide = false;
 
 
 
-
-  ngOnInit() {
+  ngAfterViewInit() {
 
 
 
@@ -46,6 +55,13 @@ showhide = false;
 
   }
 
+
+  receivemessage($event) {
+
+    this.data = $event;
+
+    console.log(this.data);
+  }
 
 // (window:resize) in frontend
 
