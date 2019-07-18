@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResizedEvent } from 'angular-resize-event';
+// import { ResizedEvent } from 'angular-resize-event';
 
 @Component({
   selector: 'app-advanced-search',
