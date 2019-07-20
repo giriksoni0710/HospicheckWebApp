@@ -1,21 +1,29 @@
 import { Component, OnInit, Input, AfterViewInit, ViewChild } from '@angular/core';
-import { ResizedEvent } from 'angular-resize-event';
-import { HomeComponent } from '../home/home.component';
+import { DataService } from '../data.service';
+import { Route, Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-advanced-search',
   templateUrl: './advanced-search.component.html',
   styleUrls: ['./advanced-search.component.scss']
 })
-export class AdvancedSearchComponent implements AfterViewInit {
+export class AdvancedSearchComponent implements OnInit {
+
+  query1: String;
+  query2: String;
+  url:any;
+  displaydata: any;
+  maindata: any;
+
+  hospital_name: String;
+  hospital_address: String;
+  hospital_city: String;
+  hospital_phone: Number;
+  website_link: String;
 
 
-
-
-
-
-data: object;
 
 
 showhide = false;
@@ -29,10 +37,22 @@ showhide = false;
   }
 
 
-  constructor(private http: HttpClient) {
+  constructor(public dataService: DataService, public route: ActivatedRoute, public http: HttpClient) {
 
     // console.log(this.query2);
+    this.query1 = '';
+    this.query2 = '';
+    this.url = "http://localhost:3000/searchQuery";
+    this.maindata;
 
+    this.hospital_name = '';
+    this.hospital_address = '';
+
+    this.hospital_city = '';
+
+    this.hospital_phone;
+
+    this.website_link = '';
 
    }
 
@@ -42,26 +62,36 @@ showhide = false;
   // }
 
 
-
-  ngAfterViewInit() {
-
-
+  ngOnInit() {
 
     if (window.matchMedia('(min-width: 810px)').matches) {
 
-    this.showhide = true;
+      this.showhide = true;
 
-      }
+     }
+      let query1 = this.route.snapshot.queryParamMap.get('searchinput');
 
-  }
+      let query2 = this.route.snapshot.queryParamMap.get('searchcity');
+
+           this.http.post(this.url,{searchinput:query1,searchcity:query2}).toPromise().then(data =>
+                {
+
+                  this.maindata = data;
+
+              });
 
 
-  receivemessage($event) {
 
-    this.data = $event;
+    }
 
-    console.log(this.data);
-  }
+    }
+
+
+
+
+
+
+
 
 // (window:resize) in frontend
 
@@ -78,4 +108,4 @@ showhide = false;
 
 
 
-}
+

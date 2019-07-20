@@ -12,6 +12,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 import { SingleHospitalViewComponent } from './single-hospital-view/single-hospital-view.component';
+import { DataService } from './data.service';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,7 @@ import { SingleHospitalViewComponent } from './single-hospital-view/single-hospi
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

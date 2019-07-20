@@ -2,15 +2,25 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { Router } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent
 {
 
+  get data():any {
+
+    return this.dataService.serviceData;
+}
+set data(value: any) {
+    this.dataService.serviceData = value;
+}
 
   maindata: any;
 
@@ -18,6 +28,7 @@ export class HomeComponent
   query2: String;
   url:any;
   postData: any;
+  hospNames: any;
 
   abc(){
 
@@ -25,7 +36,7 @@ export class HomeComponent
   }
 
 
-  constructor(private http: HttpClient, public router: Router)
+  constructor(private http: HttpClient, public router: Router, public dataService: DataService)
   {
 
     this.query1 = '';
@@ -33,23 +44,32 @@ export class HomeComponent
     this.url = "http://localhost:3000/searchQuery";
   }
 
-  @Output() messageEvent = new EventEmitter<any>();
+  // @Output() messageEvent = new EventEmitter<any>();
 
 
 
 
     post() {
+
+      if(this.query2=="" || this.query2=="null")
+      {
+        console.log("City is empty");
+        return false;
+      }
+
       // console.log('post',this.message);
        this.http.post(this.url,{searchinput:this.query1,searchcity:this.query2}).toPromise().then(data =>
         {
 
           this.maindata = data;
 
-          this.sendData();
+
+          // this.data(this.maindata);
 
 
-          this.router.navigate(['/advanced-search']);
-          console.log(this.maindata);
+          // this.sendData();
+          this.router.navigate(['/advanced-search'], {queryParams: {searchinput: this.query1,searchcity:this.query2}});
+          // console.log(this.data);
 
 
         });
@@ -57,18 +77,29 @@ export class HomeComponent
           }
 
 
-          sendData() {
+          // sendData() {
 
-            this.messageEvent.emit(this.maindata);
+          //   this.messageEvent.emit(this.maindata);
 
-          }
-
-
+          // }
 
 
+    // async ngOnInit(){
+    //   this.hospNames = await this.http.get('http://localhost:3000/searchQuery').toPromise().then(data=>{
+    //     console.log(data);
+
+    //   });
 
 
 
 
 
-}
+
+
+
+
+    }
+
+
+
+
