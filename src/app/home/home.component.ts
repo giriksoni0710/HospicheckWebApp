@@ -1,18 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent{
+export class HomeComponent implements OnInit{
 
   query1: String;
   query2: String;
   url:any;
   postData: any;
   hospNames: any;
+  // myControl = new FormControl();
+  // options: string[] = ['One', 'Two', 'Three'];
 
   constructor(private http: HttpClient)
   {
