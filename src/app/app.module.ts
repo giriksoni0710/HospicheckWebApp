@@ -13,7 +13,12 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 import { SingleHospitalViewComponent } from './single-hospital-view/single-hospital-view.component';
+<<<<<<< HEAD
 import { MatFormFieldModule,MatInputModule,MatSelectModule,MatAutocompleteModule } from '@angular/material';
+=======
+import { DataService } from './data.service';
+
+>>>>>>> 8d38a738459cc7844b6edc264097f4ccbe631e7c
 
 @NgModule({
   declarations: [
@@ -38,7 +43,7 @@ import { MatFormFieldModule,MatInputModule,MatSelectModule,MatAutocompleteModule
     MatSelectModule,
     MatAutocompleteModule,
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
