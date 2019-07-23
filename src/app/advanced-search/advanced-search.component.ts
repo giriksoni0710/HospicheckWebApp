@@ -2,6 +2,7 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild } from '@angular/cor
 import { DataService } from '../data.service';
 import { Route, Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
 
 
 @Component({
@@ -83,6 +84,13 @@ showhide = false;
 
 
     }
+
+    // addtocompare(hname: any){
+
+    // console.log(hname);
+      
+
+    // }
 
     }
 
