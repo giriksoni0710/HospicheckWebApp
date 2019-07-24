@@ -1,4 +1,4 @@
-import { Component,OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormControl } from '@angular/forms';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
@@ -11,6 +11,7 @@ import { DataService } from '../data.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit{
 
   query1: String;
@@ -81,17 +82,8 @@ export class HomeComponent implements OnInit{
 
       });
 
-
-
-
-
-
-
-
-
     }
-
-
-
-
   }
+
+
+
