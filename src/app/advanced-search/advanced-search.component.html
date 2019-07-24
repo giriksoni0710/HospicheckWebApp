@@ -1,0 +1,104 @@
+<div class="maingrid">
+
+
+
+<div class="firstgrid">
+
+
+
+
+<div class="filter" (click)= "filtertoggle()">
+
+
+<i class="fa fa-filter"></i>
+<h5>Narrow your results</h5>
+
+</div>
+
+<div class="difffilters" *ngIf="showhide">
+
+    <div class="type">
+    <label for="" style="background-color: slategray;"> Type </label><br>
+      <input type="checkbox" name="" id="" class="hospital"> <span>Hospital</span><br>
+    <input type="checkbox" name="" id="" class="walkinclinic"> <span>Walk in Clinics</span>
+
+
+    </div>
+    <div class="location type">
+        <label for="" style="background-color: slategray;"> Location </label><br>
+        <input type="checkbox" name="" id="" class="hospital"> <span>Vancouver</span><br>
+      <input type="checkbox" name="" id="" class="walkinclinic"> <span>Burnaby</span><br>
+      <input type="checkbox" name="" id="" class="walkinclinic"> <span>Surrey</span><br>
+      <input type="checkbox" name="" id="" class="walkinclinic"> <span>Langley</span>
+
+
+
+
+    </div>
+    <div class="distance type">
+        <label for="" style="background-color: slategray;"> Distance </label><br>
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <br> <h6> In Kms </h6>
+    </div>
+
+    <div class="department type">
+
+        <label for="" style="background-color: slategray;"> Department </label><br>
+        <input type="checkbox" name="" id="" class="hospital"> <span>Cardiology</span><br>
+      <input type="checkbox" name="" id="" class="walkinclinic"> <span>Neurology</span><br>
+      <input type="checkbox" name="" id="" class="hospital"> <span>General Surgery</span><br>
+      <input type="checkbox" name="" id="" class="walkinclinic"> <span>Dermatology</span><br>
+      <input type="checkbox" name="" id="" class="hospital"> <span>Dental Care</span><br>
+
+    </div>
+
+    </div>
+
+    <div *ngIf="!boolean">
+
+    </div>
+
+  </div>
+
+<div class="2ndgrid" style="padding-right: 2rem;">
+
+<div class="display-results">
+
+<h5>8 results for pediatrics near Vancouver</h5>
+
+</div>
+
+<div class="comparediv">
+
+  <p> choose upto 2 hospitals to compare</p>
+<button class="compare-btn"> Compare </button>
+
+
+</div>
+
+
+
+<div class="hospital-cards" *ngFor="let data of maindata">
+    <div class="starrating">
+  <h5 class="hospitalname"> {{ data.hospName }}  </h5>
+
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star checked"></span>
+  <span class="fa fa-star"></span>
+</div>
+<br>
+<div class="details">
+<i class="fas fa-map-marker" aria-hidden="true"></i> {{data.hospAddr}} <br> {{data.city}}<br>
+<i class="fas fa-phone"> {{data.phone}} </i><br>
+<i class="fas fa-globe"> <button>{{data.website}}</button> </i>
+</div>
+<br>
+<div class="cmpbtn">
+<button class="buttoncompare">ADD TO COMPARE</button>
+</div>
+</div>
+</div>
+</div>
+

@@ -1,0 +1,245 @@
+
+.banner
+{
+  width: 100%;
+  height:660px;
+  background:url('/assets/img/landing-page-banner-image.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  .searchdiv {
+    width:388px;
+    // height: 362px;
+    height: 312px;
+    margin: 1rem auto 0;
+    border-radius:8.23px;
+    background-color: rgba(236,240,241,0.4);
+    text-align: left;
+  }
+
+  .bannertext{
+    text-align:center;
+    color: white;
+    padding-top: 100px;
+  }
+
+  input[type="text"]{
+    display:block;
+    margin:auto;
+    width: 87%;
+    height: 40px;
+    // box-shadow: 0 1px 5px 7px rgba(0, 0, 0, 0.1);
+    box-shadow:6px 10px 8px 2px rgba(0, 0, 0, 0.1);
+    outline: none;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    padding-left:0.5rem;
+  }
+  // #query1Select{
+  //   position: relative;
+  //   height: 100px;
+  //   width: 336.547px;
+  //   left: 6.9%;
+  //   overflow: scroll;
+  //   z-index: 100;
+  //   -webkit-appearance: none;
+  //   outline: none;
+  // }
+  // .example-form {
+  //   min-width: 150px;
+  //   max-width: 500px;
+  //   width: 100%;
+  // }
+  
+  // .example-full-width {
+  //   // width: 100%;
+  //   width: 87%;
+  // }
+
+  #searchcity{
+    display:block;
+    margin:auto;
+    width:87%;
+    height:40px;
+    box-shadow:6px 10px 8px 2px rgba(0, 0, 0, 0.1);
+    outline:none;
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    padding-left:0.5rem;
+  }
+
+  label{
+    margin: 0 1.7rem;
+    color: white;
+    &:nth-of-type(1){
+      margin-top:3rem;
+    }
+  }
+
+  .city{
+    margin-top:1rem !important;
+  }
+
+  input[type="radio"]{
+    margin:0 0 0 1.7rem;
+  }
+
+  .radiobtntxt{
+    color: white;
+    padding:0.6rem;
+  }
+  #searchBtn{
+    display:block;
+    margin:2rem auto 1rem;
+    width:87%;
+    height:40px;
+    border-radius:5px;
+    background:#385398;
+    border:none;
+    color:#fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+}
+.reviewHeading{
+  text-align:center;
+  margin: 3.5rem 0;
+
+  h2,h6{
+    color:#385398;
+  }
+  h6{
+    letter-spacing: 2px;
+    line-height:1.4;
+  }
+}
+
+
+.reviewChild1{
+
+  display:flex;
+  flex-flow:row wrap;
+
+  .reviewCard{
+    width:330px;
+    height:450px;
+    // background:Red;
+    // text-align:center;
+    margin:0 auto 2rem;
+    box-shadow:0 4px 3px 3px #dcdcdc;
+
+    .reviewImg{
+
+      width:100%;
+      height:190px;
+      // background:green;
+      img{
+        max-width:100%;
+        min-width:100%;
+        height: auto;
+      }
+    }
+
+    .reviewFor{
+      width:30%;
+      height:auto;
+      // background:yellow;
+      margin:0.8rem 1rem;
+      font-size: 0.8em;
+    }
+    .hospClinicName{
+      width:85%;
+      height:auto;
+      margin:0.8rem 1rem;
+      // background:cyan;
+      color:#385398;
+      font-size:1.1em;
+    }
+    .ratings{
+      width:60%;
+      height:30px;
+      margin:0.8rem 1rem;
+      // background:orange;
+
+      img{
+        max-width:100%;
+        height:auto;
+      }
+    }
+    .reviewBody{
+      width:90%;
+      height:50px;
+      margin:0.8rem 1rem;
+      // background:hotpink;
+      overflow:hidden;
+      -webkit-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+    }
+
+  }
+}
+
+.reviewCard2{
+  // width:330px;
+  width: 68.05%;
+  @media screen and (min-width:1000px)
+  {
+    width: 80%;
+  }
+  height:auto;
+  margin:0 auto 2rem;
+  box-shadow:0 4px 3px 3px #dcdcdc;
+
+  .reviewImg2{
+    display:inline-block;
+    width: 90%;
+    height: 190px;
+    max-height:300px;
+    margin: 1rem 5% 0;
+    padding-top: 0.5rem;
+    @media screen and (min-width:640px)
+    {
+      padding-top: 0;
+    }
+    @media screen and (min-width:1000px)
+    {
+      height: 400px;
+    }
+    // margin: 2rem 5% 0;
+    // text-align: center;
+    // background: red;
+    img{
+      // max-width:100%;
+      // height: auto;
+      width:100%;
+      max-width: 100%;
+      max-height: 100%;
+      height: auto;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+  .reviewBody2{
+    // width:90%;
+    // height:auto;
+    // display:inline-block;
+    // padding: 1.5rem;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 1.5rem 1.5rem;
+    @media screen and (min-width:640px)
+    {
+      padding:1.5rem;
+    }
+    @media screen and (min-width:1000px)
+    {
+      padding:1.5rem 5rem;
+    }
+    @media screen and (min-width:1350px)
+    {
+      padding:1.5rem 8rem;
+    }
+  }
+}
