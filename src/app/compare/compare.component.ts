@@ -11,6 +11,7 @@ export class CompareComponent implements OnInit {
 
 query1: String;
 query2: String;
+maindata: any;
 
 
   constructor(public router: Router, public route: ActivatedRoute, public http: HttpClient) {
@@ -18,6 +19,7 @@ query2: String;
     this.query1= '';
 
     this.query2= '';
+    this.maindata='';
 
    }
 
@@ -33,9 +35,13 @@ query2: String;
  
     this.http.post("http://localhost:3000/searchQuery2", {searchcity1: query1.toString(), searchcity2: query2.toString()}).toPromise().then(data=>{
 
-
-    console.log("hello");
-
+      this.maindata = data;
+    if(this.maindata)
+    {
+    console.log(this.maindata);
+    }else{
+      console.log('no data');
+    }
     })
     
 
