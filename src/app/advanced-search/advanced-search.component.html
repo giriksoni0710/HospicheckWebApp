@@ -71,6 +71,14 @@
 <div class="comparediv">
 
   <p> choose upto 2 hospitals to compare</p>
+<<<<<<< HEAD
+=======
+  <div >
+
+    <div class="comp-div-1"></div>
+    <div class="comp-div-2"></div>
+  </div>
+>>>>>>> 832ddb1adcb9b7959b1420e83f92926300ed604c
 <button class="compare-btn"> Compare </button>
 
 
@@ -78,9 +86,15 @@
 
 
 
+<<<<<<< HEAD
 <div class="hospital-cards" *ngFor="let data of maindata">
     <div class="starrating">
   <h5 class="hospitalname"> {{ data.hospName }}  </h5>
+=======
+<div class="hospital-cards" *ngFor="let abc of maindata">
+    <div class="starrating">
+  <h5 class="hospitalname" ng-model="hospitalname" #cmp>  {{ abc.hospName }}  </h5>
+>>>>>>> 832ddb1adcb9b7959b1420e83f92926300ed604c
 
   <span class="fa fa-star checked"></span>
   <span class="fa fa-star checked"></span>
@@ -90,6 +104,7 @@
 </div>
 <br>
 <div class="details">
+<<<<<<< HEAD
 <i class="fas fa-map-marker" aria-hidden="true"></i> {{data.hospAddr}} <br> {{data.city}}<br>
 <i class="fas fa-phone"> {{data.phone}} </i><br>
 <i class="fas fa-globe"> <button>{{data.website}}</button> </i>
@@ -97,6 +112,15 @@
 <br>
 <div class="cmpbtn">
 <button class="buttoncompare">ADD TO COMPARE</button>
+=======
+<i class="fas fa-map-marker" aria-hidden="true"></i> {{abc.hospAddr}} <br> {{abc.city}}<br>
+<i class="fas fa-phone"> {{abc.phone}} </i><br>
+<i class="fas fa-globe"> <button>{{abc.website}}</button> </i>
+</div>
+<br>
+<div class="cmpbtn">
+<button class="buttoncompare" (click)="addtocompare(cmp)" >ADD TO COMPARE</button>
+>>>>>>> 832ddb1adcb9b7959b1420e83f92926300ed604c
 </div>
 </div>
 </div>

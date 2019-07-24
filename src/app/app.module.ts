@@ -13,9 +13,11 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
 import { AdvancedSearchComponent } from './advanced-search/advanced-search.component';
 import { SingleHospitalViewComponent } from './single-hospital-view/single-hospital-view.component';
-import { MatFormFieldModule,MatInputModule,MatSelectModule,MatAutocompleteModule } from '@angular/material';
-import { DataService } from './data.service';
 
+import { MatFormFieldModule,MatInputModule,MatSelectModule,MatAutocompleteModule } from '@angular/material';
+
+import { DataService } from './data.service';
+import { CompareComponent } from './compare/compare.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { DataService } from './data.service';
     HomeComponent,
     FooterComponent,
     AdvancedSearchComponent,
-    SingleHospitalViewComponent
+    SingleHospitalViewComponent,
+    CompareComponent
   ],
   imports: [
     BrowserModule,

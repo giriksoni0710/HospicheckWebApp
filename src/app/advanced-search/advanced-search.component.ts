@@ -2,6 +2,10 @@ import { Component, OnInit, Input, AfterViewInit, ViewChild } from '@angular/cor
 import { DataService } from '../data.service';
 import { Route, Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+<<<<<<< HEAD
+=======
+import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
+>>>>>>> 832ddb1adcb9b7959b1420e83f92926300ed604c
 
 
 @Component({
@@ -84,6 +88,20 @@ showhide = false;
 
     }
 
+<<<<<<< HEAD
+=======
+    //*******we could also pass the appended hospName as the div id*************//
+    //****then every div will have the hospname as id and it will be easier to process further***//
+
+
+    addtocompare(cmp: any){
+
+    alert(cmp.textContent);
+      
+
+    }
+
+>>>>>>> 832ddb1adcb9b7959b1420e83f92926300ed604c
     }
 
 

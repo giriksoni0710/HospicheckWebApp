@@ -11,18 +11,8 @@ import { DataService } from '../data.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit 
-{
 
-  get data():any {
-
-    return this.dataService.serviceData;
-}
-set data(value: any) {
-    this.dataService.serviceData = value;
-}
-
-  maindata: any;
+export class HomeComponent implements OnInit{
 
   query1: String;
   query2: String;
@@ -63,7 +53,7 @@ set data(value: any) {
        this.http.post(this.url,{searchinput:this.query1,searchcity:this.query2}).toPromise().then(data =>
         {
 
-          this.maindata = data;
+          // this.maindata = data;
 
 
           // this.data(this.maindata);
@@ -77,6 +67,8 @@ set data(value: any) {
         });
 
           }
+
+
           // sendData() {
 
           //   this.messageEvent.emit(this.maindata);
