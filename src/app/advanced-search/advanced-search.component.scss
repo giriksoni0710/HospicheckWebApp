@@ -299,5 +299,20 @@ font-family: lato;
 
 
   }
+.hospNameCompare{
+  display:grid;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: .6rem;
+  padding: .6rem;
+  align-items: center;
+  font-size: 0.8rem;
+    font-weight: bold;
+
+  @media screen and (min-width: 1200px) {
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+  }
+}
 
 

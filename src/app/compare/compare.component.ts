@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-compare',
@@ -7,9 +9,37 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompareComponent implements OnInit {
 
-  constructor() { }
+query1: String;
+query2: String;
+
+
+  constructor(public router: Router, public route: ActivatedRoute, public http: HttpClient) {
+
+    this.query1= '';
+
+    this.query2= '';
+
+   }
 
   ngOnInit() {
+
+    let query1 = this.route.snapshot.queryParamMap.get('hosp1');
+
+    let query2 = this.route.snapshot.queryParamMap.get('hosp2');
+
+
+    // console.log(query1);
+    // console.log(query2);
+ 
+    this.http.post("http://localhost:3000/searchQuery2", {searchcity1: query1.toString(), searchcity2: query2.toString()}).toPromise().then(data=>{
+
+
+    console.log("hello");
+
+    })
+    
+
+
   }
 
 }

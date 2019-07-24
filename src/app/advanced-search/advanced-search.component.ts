@@ -17,18 +17,21 @@ export class AdvancedSearchComponent implements OnInit {
   url:any;
   displaydata: any;
   maindata: any;
+  abc: any;
+  xyz: any;
 
   hospital_name: String;
   hospital_address: String;
   hospital_city: String;
   hospital_phone: Number;
   website_link: String;
+  count:any =0;
 
 
 
 
 showhide = false;
-
+comparepressed= false;
 
   filtertoggle() {
 
@@ -38,7 +41,7 @@ showhide = false;
   }
 
 
-  constructor(public dataService: DataService, public route: ActivatedRoute, public http: HttpClient) {
+  constructor(public dataService: DataService,public router: Router, public route: ActivatedRoute, public http: HttpClient) {
 
     // console.log(this.query2);
     this.query1 = '';
@@ -88,13 +91,34 @@ showhide = false;
     //*******we could also pass the appended hospName as the div id*************//
     //****then every div will have the hospname as id and it will be easier to process further***//
 
+    
 
-    addtocompare(cmp: any){
+    addtocompare(cmp: String){
+      
+      this.comparepressed= true;
+      
+      if(this.count==0){
+      this.abc= cmp;
+      // console.log(this.abc);
+      this.count++;
+      }
+      else if(this.count==1){
+      this.xyz = cmp; 
+      this.count = 0;
+      }
+      else{
+        return false;
+      }
+      // this.count++;
+    }
 
-    alert(cmp.textContent);
+    
+    compareData(){
+
+      this.router.navigate(['/compare'], {queryParams: {hosp1: this.abc.textContent, hosp2:this.xyz.textContent}});
       
 
-    }
+      }
 
     }
 
