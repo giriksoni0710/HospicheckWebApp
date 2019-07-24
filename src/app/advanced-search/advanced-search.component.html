@@ -71,6 +71,11 @@
 <div class="comparediv">
 
   <p> choose upto 2 hospitals to compare</p>
+  <div >
+
+    <div class="comp-div-1"></div>
+    <div class="comp-div-2"></div>
+  </div>
 <button class="compare-btn"> Compare </button>
 
 
@@ -80,7 +85,7 @@
 
 <div class="hospital-cards" *ngFor="let abc of maindata">
     <div class="starrating">
-  <h5 class="hospitalname" ng-model="hospitalname"> {{ abc.hospName }}  </h5>
+  <h5 class="hospitalname" ng-model="hospitalname" #cmp>  {{ abc.hospName }}  </h5>
 
   <span class="fa fa-star checked"></span>
   <span class="fa fa-star checked"></span>
@@ -96,7 +101,7 @@
 </div>
 <br>
 <div class="cmpbtn">
-<button class="buttoncompare" (click)="addtocompare(#hname.value)" >ADD TO COMPARE</button>
+<button class="buttoncompare" (click)="addtocompare(cmp)" >ADD TO COMPARE</button>
 </div>
 </div>
 </div>

@@ -85,12 +85,16 @@ showhide = false;
 
     }
 
-    // addtocompare(hname: any){
+    //*******we could also pass the appended hospName as the div id*************//
+    //****then every div will have the hospname as id and it will be easier to process further***//
 
-    // console.log(hname);
+
+    addtocompare(cmp: any){
+
+    alert(cmp.textContent);
       
 
-    // }
+    }
 
     }
 

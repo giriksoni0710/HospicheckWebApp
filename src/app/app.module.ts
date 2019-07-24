@@ -17,6 +17,7 @@ import { SingleHospitalViewComponent } from './single-hospital-view/single-hospi
 import { MatFormFieldModule,MatInputModule,MatSelectModule,MatAutocompleteModule } from '@angular/material';
 
 import { DataService } from './data.service';
+import { CompareComponent } from './compare/compare.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DataService } from './data.service';
     HomeComponent,
     FooterComponent,
     AdvancedSearchComponent,
-    SingleHospitalViewComponent
+    SingleHospitalViewComponent,
+    CompareComponent
   ],
   imports: [
     BrowserModule,
