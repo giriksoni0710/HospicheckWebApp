@@ -27,6 +27,7 @@ export class AdvancedSearchComponent implements OnInit {
   burnaby: any;
   surrey: any;
   langley: any;
+  richmond : any;
   cardiology: any;
   neurology: any;
   general: any;
@@ -100,11 +101,7 @@ comparepressed= false;
     // ,walkin: String,vancouver: String,burnaby: String,surrey: String,langley: String,cardiology: String,neurology: String,general: String,dermatology: String,dental
     updateSearch(hospital: any, walkin: any,vancouver: any,burnaby: any,surrey: any,langley: any,cardiology: any,neurology: any,general: any,dermatology: any,dental:any)
     // updateSearch()
-    {
-      // this.hospital = hospital;
-      // if(vancouver)
-      // {
-      
+    { 
       let obj1 =
       {
         hospital : hospital.checked,
@@ -113,6 +110,7 @@ comparepressed= false;
         burnaby : burnaby.checked,
         surrey : surrey.checked,
         langley : langley.checked,
+        // richmond : richmond.checked,
         cardiology : cardiology.checked,
         neurology : neurology.checked,
         general : general.checked,
@@ -124,6 +122,7 @@ comparepressed= false;
         burnaby1 : burnaby.value,
         surrey1 : surrey.value,
         langley1 : langley.value,
+        // richmond1 : richmond.value,
         cardiology1 : cardiology.value,
         neurology1 : neurology.value,
         general1 : general.value,
@@ -131,14 +130,6 @@ comparepressed= false;
         dental1 : dental.value
       }
       this.http.post(this.url2,obj1).toPromise();
-      // }
-      // if(hospital.checked)
-      // this.arr.push(arrB);
-      // for(let i=0;i<arrB.length;i++)
-      // {
-        // this.hospital = hospital;
-        // console.log(this.arr[i]);
-      // }
     }
 
     addtocompare(cmp: String){

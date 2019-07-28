@@ -39,7 +39,12 @@ export class HomeComponent implements OnInit{
   // @Output() messageEvent = new EventEmitter<any>();
 
 
+  navigatetosingle(){
 
+
+  
+
+  }
 
     post() {
 
