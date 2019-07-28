@@ -18,6 +18,7 @@ export class AdvancedSearchComponent implements OnInit {
   url2:any;
   displaydata: any;
   maindata: any;
+  querydata: any;
   abc: any;
   xyz: any;
   arr: any;
@@ -64,6 +65,7 @@ comparepressed= false;
     this.url = "http://localhost:3000/searchQuery";
     this.url2 = "http://localhost:3000/searchQueryFilter";
     this.maindata;
+    this.querydata;
 
     this.hospital_name = '';
     this.hospital_address = '';
@@ -127,7 +129,11 @@ comparepressed= false;
         gynae1 : gynae.value,
         ortho1 : ortho.value
       }
-      this.http.post(this.url2,obj1).toPromise();
+      this.http.post(this.url2,obj1).toPromise().then(data=>{
+        
+        this.maindata = data;
+        // console.log(data);
+      });
     }
 
     addtocompare(cmp: String){
