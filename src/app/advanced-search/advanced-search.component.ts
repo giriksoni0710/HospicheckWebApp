@@ -97,14 +97,8 @@ comparepressed= false;
     //*******we could also pass the appended hospName as the div id*************//
     //****then every div will have the hospname as id and it will be easier to process further***//
 
-    // ,walkin: String,vancouver: String,burnaby: String,surrey: String,langley: String,cardiology: String,neurology: String,general: String,dermatology: String,dental
     updateSearch(hospital: any, walkin: any,vancouver: any,burnaby: any,surrey: any,langley: any,cardiology: any,neurology: any,general: any,dermatology: any,dental:any)
-    // updateSearch()
-    {
-      // this.hospital = hospital;
-      // if(vancouver)
-      // {
-      
+    { 
       let obj1 =
       {
         hospital : hospital.checked,
@@ -131,14 +125,6 @@ comparepressed= false;
         dental1 : dental.value
       }
       this.http.post(this.url2,obj1).toPromise();
-      // }
-      // if(hospital.checked)
-      // this.arr.push(arrB);
-      // for(let i=0;i<arrB.length;i++)
-      // {
-        // this.hospital = hospital;
-        // console.log(this.arr[i]);
-      // }
     }
 
     addtocompare(cmp: String){
