@@ -98,7 +98,7 @@ comparepressed= false;
     //*******we could also pass the appended hospName as the div id*************//
     //****then every div will have the hospname as id and it will be easier to process further***//
 
-    updateSearch(hospital: any, walkin: any,vancouver: any,burnaby: any,surrey: any,langley: any,cardiology: any,neurology: any,general: any,dermatology: any,dental:any)
+    updateSearch(hospital: any, walkin: any,vancouver: any,burnaby: any,surrey: any,langley: any,cardiology: any,ent: any,gas: any,gynae: any,ortho:any)
     { 
       let obj1 =
       {
@@ -110,10 +110,10 @@ comparepressed= false;
         langley : langley.checked,
         // richmond : richmond.checked,
         cardiology : cardiology.checked,
-        neurology : neurology.checked,
-        general : general.checked,
-        dermatology : dermatology.checked,
-        dental : dental.checked,
+        ent : ent.checked,
+        gas : gas.checked,
+        gynae : gynae.checked,
+        ortho : ortho.checked,
         hospital1 : hospital.value,
         walkin1 : walkin.value,
         vancouver1 : vancouver.value,
@@ -122,10 +122,10 @@ comparepressed= false;
         langley1 : langley.value,
         // richmond1 : richmond.value,
         cardiology1 : cardiology.value,
-        neurology1 : neurology.value,
-        general1 : general.value,
-        dermatology1 : dermatology.value,
-        dental1 : dental.value
+        ent1 : ent.value,
+        gas1 : gas.value,
+        gynae1 : gynae.value,
+        ortho1 : ortho.value
       }
       this.http.post(this.url2,obj1).toPromise();
     }

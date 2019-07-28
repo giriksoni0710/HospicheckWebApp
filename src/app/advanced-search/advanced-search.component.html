@@ -30,7 +30,7 @@
         <input type="radio" name="cities" value="Burnaby" #burnaby class="walkinclinic"> <span>Burnaby</span><br>
         <input type="radio" name="cities" value="Surrey" #surrey class="walkinclinic"> <span>Surrey</span><br>
         <input type="radio" name="cities" value="Langley" #langley class="walkinclinic"> <span>Langley</span>
-        <!-- <input type="radio" name="cities" value="richmond" #richmond class="walkinclinic"> <span>Richmond</span> -->
+        <!-- <input type="radio" name="cities" value="Richmond" #richmond class="walkinclinic"> <span>Richmond</span> -->
     </div>
     <!-- <div class="distance type">
         <label for="" style="background-color: slategray;"> Distance </label><br>
@@ -41,14 +41,15 @@
     <div class="department type">
 
         <label for="" style="background-color: slategray;"> Department </label><br>
-        <input type="checkbox" name="" value="cardiology" #cardiology class="hospital"> <span>Cardiology</span><br>
-        <input type="checkbox" name="" value="neurology" #neurology class="walkinclinic"> <span>Neurology</span><br>
-        <input type="checkbox" name="" value="general surgery" #general class="hospital"> <span>General Surgery</span><br>
-        <input type="checkbox" name="" value="dermatology" #dermatology class="walkinclinic"> <span>Dermatology</span><br>
-        <input type="checkbox" name="" value="dental care" #dental class="hospital"> <span>Dental Care</span><br>
+        <input type="radio" name="dept" value="Cardiology" #cardiology class="hospital"> <span>Cardiology</span><br>
+        <input type="radio" name="dept" value="Ent" #ent class="walkinclinic"> <span>Ent</span><br>
+        <input type="radio" name="dept" value="Gastroenterology" #gas class="hospital"> <span>Gastroenterology</span><br>
+        <input type="radio" name="dept" value="Gynaecology" #gynae class="walkinclinic"> <span>Gynaecology</span><br>
+        <input type="radio" name="dept" value="Orthopedic" #ortho class="hospital"> <span>Orthopedic</span><br>
+        
         <div class="updateSearch">
         <!-- <button type="reset" class="btncompare2">Reset</button> -->
-        <button class="buttoncompare" (click)="updateSearch(hospital,walkin,vancouver,burnaby,surrey,langley,cardiology,neurology,general,dermatology,dental)">Update Search</button>
+        <button class="buttoncompare" (click)="updateSearch(hospital,walkin,vancouver,burnaby,surrey,langley,cardiology,ent,gas,gynae,ortho)">Update Search</button>
       </div>
     </div>
 
