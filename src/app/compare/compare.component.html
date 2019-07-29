@@ -5,7 +5,7 @@
       <h5>
         <!-- Jim Pattison Outpatient Care
         and Surgery Centre -->
-        {{ abc.hospName }}
+        {{ abc.hospName }}{{abc.clinicName}}
       </h5>
     </div>
 
@@ -18,7 +18,7 @@
     <div class="hospDetails">
       <div>
         <img src="./assets/img/location.png" alt="Location icon">
-        <span> {{ abc.hospAddr }}<br>
+        <span> {{ abc.hospAddr }} {{abc.clinicAddr}}<br>
             {{ abc.city }}, B.C.
         </span>
       </div> 
@@ -31,7 +31,7 @@
       </div>
       <div>
           <img src="./assets/img/web.png" alt="Location icon">
-          <span> Website</span>
+          <a href="Website{{ abc.website }}">Website</a>
       </div>
     </div>
 

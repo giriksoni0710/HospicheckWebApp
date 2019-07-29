@@ -41,6 +41,7 @@ export class AdvancedSearchComponent implements OnInit {
   hospital_city: String;
   hospital_phone: Number;
   website_link: String;
+  hospCheck: String;
   count:any =0;
 
 
@@ -65,6 +66,7 @@ comparepressed= false;
     this.url = "http://localhost:3000/searchQuery";
     this.url2 = "http://localhost:3000/searchQueryFilter";
     this.maindata;
+    this.hospCheck;
     this.querydata;
 
     this.hospital_name = '';
@@ -129,6 +131,9 @@ comparepressed= false;
         gynae1 : gynae.value,
         ortho1 : ortho.value
       }
+      
+      this.hospCheck = hospital.checked;
+
       this.http.post(this.url2,obj1).toPromise().then(data=>{
         
         this.maindata = data;
@@ -158,7 +163,7 @@ comparepressed= false;
     
     compareData(){
 
-      this.router.navigate(['/compare'], {queryParams: {hosp1: this.abc.textContent, hosp2:this.xyz.textContent}});
+      this.router.navigate(['/compare'], {queryParams: {hosp1: this.abc.textContent, hosp2:this.xyz.textContent, hospCheck1: this.hospCheck}});
       
 
       }
