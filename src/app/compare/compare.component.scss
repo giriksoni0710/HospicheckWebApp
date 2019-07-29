@@ -1,13 +1,48 @@
-.Main-Compare{
+.btndiv{
+
+    text-align: center;
+    
+.searchbtn{
+    display:inline-block;
+    margin:2rem auto 1rem;
+    width:30%;
+    height:40px;
+    border-radius:5px;
+    background:#385398;
+    border:none;
+    color:#fff;
+    font-weight: bold;
+    letter-spacing: 1px;
+    max-width: 150px;
+
+    
+  }
+
+  #searchbtn1 {
+
+    
+margin-right: 0.5rem;
+
+  }
+
+  #searchbtn2 {
+
+    
+    margin-right: 0.5rem;
+    
+      }
+}
+
+.comparehosp{
     display: grid;
     grid-template-columns: 1fr 1fr;
 
 .hospdetailCard{
-    margin:3rem auto;
+    margin: 1rem 1rem 3rem 2rem;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0px -1px 3px 3px #dcdcdc;
     width: 90.5%;
-    height:auto;
-    border-radius:5px;
-    box-shadow:0 4px 3px 3px #dcdcdc;
     // text-align:center;
 
     .hospName{
@@ -122,7 +157,7 @@
     .hospDepts{
         display:inline-block;
         width: 100%;
-        margin:2rem auto;
+        
         h5{
             margin:0;
             color:#385398;
@@ -159,4 +194,13 @@
         }
     }
 }
+}
+.svgCanvas { /* (0, 0, 1, 0) */
+    display: block;
+    border: 1px solid blue;
+}
+
+.svgBigCanvas{
+    height: 400px;
+    
 }

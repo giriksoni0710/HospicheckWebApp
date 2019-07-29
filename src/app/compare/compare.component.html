@@ -1,6 +1,13 @@
+
+
+<div class="btndiv">
+<button class="tablebtn searchbtn" id="searchbtn1" (click)="displayData()"> Tabular </button>
+<button class="d3btn searchbtn" id="searchbtn2" (click)="displayData()"> Graphical </button >
+</div>
 <div class="Main-Compare">
 
-<div class="hospdetailCard" *ngFor="let abc of maindata">
+  <div class="comparehosp" *ngIf="compareTable">
+<div class="hospdetailCard" *ngFor="let abc of maindata" >
     <div class="hospName">
       <h5>
         <!-- Jim Pattison Outpatient Care
@@ -48,12 +55,20 @@
       <h5>Departments</h5>
     </div>
     <div class="hospheadDepts">
-      <div>Cardiology</div>
-      <div>Orthopedic</div>
-      <div>ENT</div>
-      <div>Elderly Services</div>
-      <div>Gastroenterology</div>
-      <div>Gynaecology</div>
+      <div>{{abc.department[0]}}</div>
+      <div>{{abc.department[1]}}</div>
+      <div>{{abc.department[2]}}</div>
+      <div>{{abc.department[3]}}</div>
+      <div>{{abc.department[4]}}</div>
+      
     </div>
   </div>
+</div>
+<div class="svg" *ngIf="barGraph">
+
+  <!-- <p id="p2">n mbsjkbcjksdbckjbsdkjcbkjsdbcjkb</p> -->
+    
+  
+ 
+</div>
 </div>
