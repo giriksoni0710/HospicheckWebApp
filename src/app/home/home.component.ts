@@ -35,15 +35,7 @@ export class HomeComponent implements OnInit{
     this.url = "http://localhost:3000/searchQuery";
   }
 
-  // @Output() messageEvent = new EventEmitter<any>();
-
-
-  navigatetosingle(){
-
-
-  
-
-  }
+  // @Output() deptEvent = new EventEmitter<any>();
 
     post() {
 
@@ -60,9 +52,9 @@ export class HomeComponent implements OnInit{
 
     }
 
-    public singleView(hospName:any,hospAddr:any,phone:any,website:any,department:any)
+    public singleView(hospName:any)
     {
-      this.router.navigate(['/single-hospital-view'], {queryParams: {hospName: hospName,hospAddr:hospAddr,phone:phone,website:website,department:department}});
+      this.router.navigate(['/single-hospital-view'], {queryParams: {hospName: hospName}});
     }
 
     async ngOnInit(){
