@@ -1,11 +1,6 @@
 <div class="maingrid">
 
-
-
 <div class="firstgrid">
-
-
-
 
 <div class="filter" (click)= "filtertoggle()">
 
@@ -25,29 +20,26 @@
 
     </div>
     <div class="location type">
-        <label for="" style="background-color:#ECF0F1;"> Location </label><br>
-        <input type="checkbox" name="" value="vancouver" #vancouver class="hospital"> <span>Vancouver</span><br>
-        <input type="checkbox" name="" value="burnaby" #burnaby class="walkinclinic"> <span>Burnaby</span><br>
-        <input type="checkbox" name="" value="surrey" #surrey class="walkinclinic"> <span>Surrey</span><br>
-        <input type="checkbox" name="" value="langley" #langley class="walkinclinic"> <span>Langley</span>
+        <label for="" style="background-color: #ECF0F1;"> Location </label><br>
+        <input type="radio" name="cities" value="Vancouver" #vancouver class="hospital"> <span>Vancouver</span><br>
+        <input type="radio" name="cities" value="Burnaby" #burnaby class="walkinclinic"> <span>Burnaby</span><br>
+        <input type="radio" name="cities" value="Surrey" #surrey class="walkinclinic"> <span>Surrey</span><br>
+        <input type="radio" name="cities" value="Langley" #langley class="walkinclinic"> <span>Langley</span>
+        <!-- <input type="radio" name="cities" value="Richmond" #richmond class="walkinclinic"> <span>Richmond</span> -->
+
     </div>
-    <!-- <div class="distance type">
-        <label for="" style="background-color: slategray;"> Distance </label><br>
-        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-        <br> <h6> In Kms </h6>
-    </div> -->
 
     <div class="department type">
 
         <label for="" style="background-color: #ECF0F1;"> Department </label><br>
-        <input type="checkbox" name="" value="cardiology" #cardiology class="hospital"> <span>Cardiology</span><br>
-        <input type="checkbox" name="" value="neurology" #neurology class="walkinclinic"> <span>Neurology</span><br>
-        <input type="checkbox" name="" value="general surgery" #general class="hospital"> <span>General Surgery</span><br>
-        <input type="checkbox" name="" value="dermatology" #dermatology class="walkinclinic"> <span>Dermatology</span><br>
-        <input type="checkbox" name="" value="dental care" #dental class="hospital"> <span>Dental Care</span><br>
-        <div class="updateSearch">
-        <!-- <button type="reset" class="btncompare2">Reset</button> -->
-        <button class="buttoncompare" (click)="updateSearch(hospital,walkin,vancouver,burnaby,surrey,langley,cardiology,neurology,general,dermatology,dental)">Update Search</button>
+        <input type="radio" name="dept" value="Cardiology" #cardiology class="hospital"> <span>Cardiology</span><br>
+        <input type="radio" name="dept" value="Ent" #ent class="walkinclinic"> <span>Ent</span><br>
+        <input type="radio" name="dept" value="Gastroenterology" #gas class="hospital"> <span>Gastroenterology</span><br>
+        <input type="radio" name="dept" value="Gynaecology" #gynae class="walkinclinic"> <span>Gynaecology</span><br>
+        <input type="radio" name="dept" value="Orthopedic" #ortho class="hospital"> <span>Orthopedic</span><br>
+        
+      <div class="updateSearch">
+        <button class="buttoncompare" (click)="updateSearch(hospital,walkin,vancouver,burnaby,surrey,langley,cardiology,ent,gas,gynae,ortho)">Update Search</button>
       </div>
     </div>
 
@@ -61,7 +53,7 @@
 
 <div class="display-results">
 
-<h5>8 results for pediatrics near Vancouver</h5>
+<h5>{{maindata.length}} results for pediatrics near Vancouver</h5>
 
 </div>
 
@@ -87,30 +79,41 @@
 
 
 </div>
-
-
 </div>
 <div class="hospital-cards" *ngFor="let data of maindata">
 
   <div class="starrating">
-  <h5 class="hospitalname" ng-model="hospitalname" #cmp>  {{ data.hospName }}  </h5>
+    <h5 class="hospitalname" ng-model="hospitalname" #cmp>  {{ data.hospName }} {{ data.clinicName }} </h5>
+    <div class="ratingDetail">
+      <img src="./assets/img/rating.png" alt="Ratings">
+    </div>
+  </div>
 
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star checked"></span>
-  <span class="fa fa-star"></span>
-</div>
-<br>
-<div class="details">
-<i class="fas fa-map-marker" aria-hidden="true"></i> {{data.hospAddr}} <br> {{data.city}}<br>
-<i class="fas fa-phone"> {{data.phone}} </i><br>
-<i class="fas fa-globe"> <button>{{data.website}}</button> </i>
-</div>
-<br>
-<div class="cmpbtn">
-<button class="buttoncompare" (click)="addtocompare(cmp)" >ADD TO COMPARE</button>
-</div>
+  <div class="locationDetailParent">
+    <div class="locationDetail">
+      <img src="./assets/img/location.png" alt="Location icon">
+          <span> {{data.hospAddr}} {{data.clinicAddr}}
+          </span>
+    </div>
+
+    <div class="phoneDetail">
+      <img src="./assets/img/phone.png" alt="Location icon">
+            <span> 
+              +1-{{data.phone}}
+            </span>
+    </div>
+
+    <div class="globeDetail">
+      <img src="./assets/img/globe.png" alt="Location icon">
+            <span> 
+              <a href={{data.website}}>Website</a>
+            </span>
+    </div>
+  </div>
+
+  <div class="cmpbtn">
+    <button class="buttoncompare" (click)="addtocompare(cmp)" >ADD TO COMPARE</button>
+  </div>
 </div>
 
 </div>

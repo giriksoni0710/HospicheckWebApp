@@ -1,8 +1,9 @@
-<div class="hospdetailCard">
+<div class="hospdetailCard" *ngFor="let data of mainData">
     <div class="hospName">
       <h5>
-        Jim Pattison Outpatient Care
-        and Surgery Centre
+        <!-- Jim Pattison Outpatient Care
+        and Surgery Centre -->
+        {{ data.hospName }}
       </h5>
     </div>
 
@@ -17,17 +18,22 @@
     <div class="hospDetails">
       <div>
         <img src="./assets/img/location.png" alt="Location icon">
-        <span> 9750 140th Street<br>
-            Surrey, B.C.  V3T 0G9
+        <span> {{data.hospAddr}}
+          <!-- 9750 140th Street<br>
+            Surrey, B.C.  V3T 0G9 -->
         </span>
       </div> 
       <div>
           <img src="./assets/img/phone.png" alt="Location icon">
-          <span> +1-604-582-4550</span>
+          <span> 
+            +1-{{data.phone}}
+            <!-- +1-604-582-4550 -->
+
+          </span>
       </div>
       <div>
           <img src="./assets/img/web.png" alt="Location icon">
-          <span> Website</span>
+          <span> <a href={{data.website}}>Website</a></span>
       </div>
     </div>
 
@@ -44,11 +50,12 @@
       <h5>Departments</h5>
     </div>
     <div class="hospheadDepts">
-      <div>Cardiology</div>
-      <div>Orthopedic</div>
-      <div>ENT</div>
-      <div>Elderly Services</div>
-      <div>Gastroenterology</div>
-      <div>Gynaecology</div>
+      <!-- <div>{{ data.department}}</div> -->
+      <div>{{data.department[0]}}</div>
+      <div>{{data.department[1]}}</div>
+      <div>{{data.department[2]}}</div>
+      <div>{{data.department[3]}}</div>
+      <div>{{data.department[4]}}</div>
+      <!-- <div>Gynaecology</div> -->
     </div>
   </div>

@@ -19,27 +19,23 @@ export class HomeComponent implements OnInit{
   url:any;
   postData: any;
   hospNames: any;
-  // myControl = new FormControl();
-  // options: string[] = ['One', 'Two', 'Three'];
-
+  mainData: any;
+  imagePath: any;
   abc(){
 
     return "hello" ;
   }
 
-
   constructor(private http: HttpClient, public router: Router, public dataService: DataService)
   {
-
     this.query1 = '';
     this.query2 = '';
+    this.mainData = [];
+    this.imagePath = [];
     this.url = "http://localhost:3000/searchQuery";
   }
 
-  // @Output() messageEvent = new EventEmitter<any>();
-
-
-
+  // @Output() deptEvent = new EventEmitter<any>();
 
     post() {
 
@@ -48,40 +44,29 @@ export class HomeComponent implements OnInit{
         console.log("City is empty");
         return false;
       }
-
-      // console.log('post',this.message);
+      
        this.http.post(this.url,{searchinput:this.query1,searchcity:this.query2}).toPromise().then(data =>
         {
-
-          // this.maindata = data;
-
-
-          // this.data(this.maindata);
-
-
-          // this.sendData();
           this.router.navigate(['/advanced-search'], {queryParams: {searchinput: this.query1,searchcity:this.query2}});
-          // console.log(this.data);
-
-
         });
 
-          }
+    }
 
-
-          // sendData() {
-
-          //   this.messageEvent.emit(this.maindata);
-
-          // }
-
+    async singleView(hospName:any)
+    {
+      // console.log("hello");
+      await this.router.navigate(['/single-hospital-view'], {queryParams: {hospName: hospName}});
+    }
 
     async ngOnInit(){
-      this.hospNames = await this.http.get('http://localhost:3000/searchQuery').toPromise().then(data=>{
+      this.hospNames = await this.http.get('http://localhost:3000/searchQuery').toPromise().then((data)=>{
+        
         console.log(data);
-
+        this.mainData = data;
       });
 
+      // this.imagePath = [{"imageP":"./assets/img/reviewHome1.png"},{"imageP":"./assets/img/reviewHome2.png"},{"imageP":"./assets/img/reviewHome3.png"}]
+      // let abcreviewChild1.children();
     }
   }
 
