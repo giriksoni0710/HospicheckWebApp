@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import * as d3 from 'd3';
 import { json } from 'd3';
+import { count } from 'rxjs/operators';
 
 @Component({
   selector: 'app-compare',
@@ -62,22 +63,55 @@ this.hospCheck = '';
 
 
   }
-  displayData(){
+  // count=0;
+  
+  public count =0
+  displayData1() {
 
-    this.compareTable = !this.compareTable;
-    this.barGraph = !this.barGraph; 
+    
+    this.compareTable = true;
+    this.barGraph = false; 
 
-    if(this.barGraph && this.count % 2 == 0){
+    if(this.count>0){
 
-      this.d3view();
-      this.count+=1;
-    }else{
+
+
       rectCanvas.parentNode.removeChild(rectCanvas);
+      this.count=0;
+
     }
 
+    // this.count=1;
+
+
+    // if(this.count=0){
+    // rectCanvas.parentNode.removeChild(rectCanvas);
+    // this.count = 1;
+    // }
+    
+
+    
+    
   }
 
-public count =0
+  displayData2(){
+    
+    // this.count = 1;
+    // this.count+=1;
+    
+    this.barGraph = true;
+    this.compareTable = false;
+// if(this.count===1){
+  if(this.count==0){    
+    this.d3view();
+    this.count++;
+    }
+
+    
+    // this.count=0;
+  // }
+  }
+
 /************D3 code */
 
 
