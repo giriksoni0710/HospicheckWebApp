@@ -18,6 +18,18 @@ import { MatFormFieldModule,MatInputModule,MatSelectModule,MatAutocompleteModule
 
 import { DataService } from './data.service';
 import { CompareComponent } from './compare/compare.component';
+import { NewNavComponent } from './new-nav/new-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { HeaderComponent } from './navigation/header/header.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -29,7 +41,9 @@ import { CompareComponent } from './compare/compare.component';
     FooterComponent,
     AdvancedSearchComponent,
     SingleHospitalViewComponent,
-    CompareComponent
+    CompareComponent,
+    NewNavComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +56,12 @@ import { CompareComponent } from './compare/compare.component';
     MatInputModule,
     MatSelectModule,
     MatAutocompleteModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [ DataService ],
   bootstrap: [AppComponent]
