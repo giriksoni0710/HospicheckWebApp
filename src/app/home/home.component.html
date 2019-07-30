@@ -64,7 +64,8 @@
     <div class="reviewCard card2" *ngFor="let main of mainData" (click)="singleView(main.hospName)">
 
       <div class="reviewImg">
-        <img src="./assets/img/reviewHome1.png" alt="Review home image1">
+        <!-- <img src="./assets/img/reviewHome1.png" alt="Review home image1"> -->
+        <img src={{main.img_path}} alt="Review home image1">
       </div>
       <!-- <div class="reviewImg">
         <img src="" alt="Review home image1">
