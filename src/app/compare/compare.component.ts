@@ -40,19 +40,22 @@ this.hospCheck = '';
 
     let hospCheck = this.route.snapshot.queryParamMap.get('hospCheck1');
     console.log(hospCheck);
+    
     if(hospCheck == null){
-      hospCheck= "true";
+
+        hospCheck = "true";
     }
     else{
     
-      hospCheck = this.route.snapshot.queryParamMap.get('hospCheck1')
+      hospCheck = this.route.snapshot.queryParamMap.get('hospCheck1').toString();
 
     }
     // console.log(hospCheck);
  
-    this.http.post("http://localhost:3000/searchQuery2", {searchcity1: query1.toString(), searchcity2: query2.toString(), hospCheck: hospCheck.toString()}).toPromise().then(data=>{
+    this.http.post("http://localhost:3000/searchQuery2", {searchcity1: query1.toString(), searchcity2: query2.toString(), hospCheck: hospCheck}).toPromise().then(data=>{
 
-      this.maindata = data;
+    console.log(hospCheck);  
+    this.maindata = data;
     
     })
     
