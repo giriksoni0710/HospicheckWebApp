@@ -124,18 +124,33 @@ color: #385398;
 
       }
 
-      .hospital-cards {
+  .hospital-cards {
 
-        text-align: center;
-    margin: 3rem 2rem 3rem 2rem;
-    padding: 2.5rem;
-    box-shadow: 1px 1px 2px 3px lightgrey
-
-
+    text-align: center;
+    margin: 3rem 2rem;
+    // padding: 2.5rem;
+    // box-shadow: 1px 1px 2px 3px lightgrey;
+    box-shadow: 0px 7px 4px rgba(0, 0, 0, 0.16);
+    @media screen and (min-width:810px)
+    {
+      display:grid;
+      grid-template-columns:1fr 0.6fr 1fr; 
+    }
+    @media screen and (min-width:1050px)
+    {
+      margin: 3rem 4.5rem;
+    }
+      // &>div{
+        // border-right: 1px solid black;
+        // padding-right: 1.2rem;
+        // &:last-child{
+          // border-right:none;
+        // }
+      // }
 
       }
       .hospitalname {
-        color: blue;
+        // color: blue;
         font-weight: bold;
       }
 
@@ -357,9 +372,9 @@ color: #385398;
   .hospital-cards {
 
     font-size: 0.8rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 3rem 2rem 3rem 2rem;
-    padding: 2rem .5rem 0rem 1rem;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // margin: 3rem 2rem 3rem 2rem;
+    // padding: 2rem .5rem 0rem 1rem;
 
   }
 
@@ -426,6 +441,36 @@ color: #385398;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: none;
   }
+}
+.locationDetailParent{
+  text-align:left;
+  justify-self:left;
+  .locationDetail{
+    margin-top: 0.5rem;
+  }
+}
+.phoneDetail{
+  margin:1rem auto;
+}
+
+.globeDetail{
+  margin:1rem auto;
+}
+.starrating{
+  color:#385398;
+  margin:0 auto;
+  align-self: center;
+  h5{
+    text-align: left;
+  }
+}
+a{
+  color:#385398;
+}
+.ratingDetail{
+  margin:1rem auto 0;
+  text-align:left;
+  justify-self:center;
 }
 
 
