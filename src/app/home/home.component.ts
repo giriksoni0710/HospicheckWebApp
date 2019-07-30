@@ -54,7 +54,7 @@ export class HomeComponent implements OnInit{
 
     async singleView(hospName:any)
     {
-      console.log("hello");
+      // console.log("hello");
       await this.router.navigate(['/single-hospital-view'], {queryParams: {hospName: hospName}});
     }
 

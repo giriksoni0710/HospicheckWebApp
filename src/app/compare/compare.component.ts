@@ -39,6 +39,15 @@ this.hospCheck = '';
     let query2 = this.route.snapshot.queryParamMap.get('hosp2');
 
     let hospCheck = this.route.snapshot.queryParamMap.get('hospCheck1');
+    console.log(hospCheck);
+    if(hospCheck == null){
+      hospCheck= "true";
+    }
+    else{
+    
+      hospCheck = this.route.snapshot.queryParamMap.get('hospCheck1')
+
+    }
     // console.log(hospCheck);
  
     this.http.post("http://localhost:3000/searchQuery2", {searchcity1: query1.toString(), searchcity2: query2.toString(), hospCheck: hospCheck.toString()}).toPromise().then(data=>{
