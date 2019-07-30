@@ -75,9 +75,9 @@ this.hospCheck = '';
     if(this.count>0){
 
 
-
-      rectCanvas.parentNode.removeChild(rectCanvas);
+      // rectCanvas.parentNode.removeChild(rectCanvas);
       this.count=0;
+      
 
     }
 

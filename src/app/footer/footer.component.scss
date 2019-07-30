@@ -50,10 +50,15 @@
     .subscribe{
         padding: 0 0.5rem;
         
+        
         .label{
             font-size:.9em;
             margin-bottom:0;
             color:#fff;
+         .thanks{
+            margin-left: 3rem;
+            margin-bottom: .5rem;
+         }
             @media screen and (min-width:1200px)
             {
                 padding-right:7.8rem;
