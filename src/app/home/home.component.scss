@@ -322,13 +322,14 @@
 
 .reviewChild2{
   margin-top: 7rem;
+  background: white;
 }
 @media only screen and (min-width: 707px){
   .reviewChild2{
     width: 100%;
     max-width: 1170px;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    // padding-right: 1rem;
+    // padding-left: 1rem;
     margin-right: auto;
     margin-left: auto;
   }
@@ -410,6 +411,9 @@
       // background:yellow;
       margin:0.8rem 1rem;
       font-size: 0.8em;
+      margin-top: 2rem;
+      font-family: lato;
+      color: #595A5B
     }
     .hospClinicName{
       width:85%;
@@ -418,6 +422,8 @@
       // background:cyan;
       color:#385398;
       font-size:1.1em;
+      font-family: lato;
+      font-weight: 600;
     }
     .ratings{
       width:60%;
@@ -438,6 +444,8 @@
       overflow:hidden;
       -webkit-text-overflow: ellipsis;
       text-overflow: ellipsis;
+      font-family: lato;
+      color: #595A5B
 
     }
 
@@ -561,19 +569,20 @@ width: 100%
 .diagonal-background{
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 8rem;
   background: #ECF0F1;
+  z-index: -1;
 }
 .diagonal-background:after{
   position:absolute;
   width: 100%;
-  height: 100%;
+  height: 46rem;
   content: '';
   background: #ECF0F1;
-  top: 0;
+  top: -46rem;
   bottom: 0;
   right: 0;
   left: 0;
   transform-origin: top right;
-  transform: skewY(-4deg);
+  transform: skewY(-7deg);
 }

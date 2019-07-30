@@ -5,6 +5,46 @@ body{
   font-family: Lato;
 }
 
+
+
+.comp-div-1{
+  // color: #828385;
+    font-family: lato;
+    /* border: 1px solid; */
+    letter-spacing: 0.04rem;
+    font-weight: 600;
+    color: white;
+    font-family: lato;
+    letter-spacing: 0.04rem;
+    font-weight: 600;
+    background: #385398;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    // padding: .2rem;
+}
+    // padding: .3rem;
+
+
+
+.comp-div-2{
+  // color: #828385;
+    font-family: lato;
+    /* border: 1px solid; */
+    letter-spacing: 0.04rem;
+    font-weight: 600;
+    color: white;
+    font-family: lato;
+    letter-spacing: 0.04rem;
+    font-weight: 600;
+    background: #385398;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    // padding: .2rem;
+}
+    // padding: .3rem;
+
+
+
 // checkboxes*********************************************************************
 
 .narrow{
@@ -68,6 +108,7 @@ color: #385398;
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
         text-align: center;
         border-radius: 5px;
+        background: white;
 
           .compare-btn {
 
@@ -116,18 +157,23 @@ color: #385398;
   .hospital-cards {
 
     text-align: center;
+    border-radius: 5px;
     margin: 3rem 2rem;
     // padding: 2.5rem;
     // box-shadow: 1px 1px 2px 3px lightgrey;
     box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.16);
+    width: 78%;
+    background: white;
+    margin-right: auto;
+    margin-left: auto;
     @media screen and (min-width:810px)
     {
       display:grid;
-      grid-template-columns:1fr 0.6fr 1fr; 
+      grid-template-columns:1fr 0.6fr 1fr;
     }
     @media screen and (min-width:1050px)
     {
-      margin: 3rem 4.5rem;
+      // margin: 3rem 4.5rem;
     }
       // &>div{
         // border-right: 1px solid black;
@@ -195,12 +241,16 @@ color: #385398;
           letter-spacing: 0em;
           color: #fff;
           text-transform: uppercase;
-          width: 152px;
+          width: 60%;
           height: 40px;
           border-radius: 5px;
           background: #22ad5f;
           border: none;
 
+        }
+
+        .cmpbtn .buttoncompare{
+          background: #385398;
         }
 
         // .buttoncompare{
@@ -215,6 +265,7 @@ color: #385398;
           margin: 1rem 2rem 1rem 2rem;
         height: fit-content;
         justify-content: flex-end;
+        background: white;
         padding: 0rem 0rem 2rem 0rem;
         // box-shadow: 1px 1px 2px 1px lightgrey;
         // border-right: 1.5px solid rgba(112, 112, 112, 0.59);
@@ -330,6 +381,7 @@ color: #385398;
 
     display: grid;
     grid-template-columns: 0.3fr 1.4fr;
+    background: #ECF0F1;
 
 
 
@@ -351,6 +403,8 @@ color: #385398;
   .difffilters {
     min-width: 322px;
     display: block !important;
+    // background: white;
+
   }
 
   .hospitalname {
@@ -424,6 +478,7 @@ color: #385398;
   align-items: center;
   font-size: 0.8rem;
     font-weight: bold;
+    margin-bottom: 1.3rem;
 
   @media screen and (min-width: 1200px) {
 

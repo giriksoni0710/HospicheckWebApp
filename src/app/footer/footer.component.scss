@@ -12,7 +12,7 @@
         display:grid;
         grid-template-columns:0.5fr 1.3fr 1.2fr 0.5fr;
     }
-    
+
     .logo{
         img{
             max-width:100%;
@@ -41,18 +41,27 @@
             li{
                 color:#fff;
                 padding:0.3rem 0;
+                font-family: Lato;
+                font-weight: bold;
+                font-size: 13px;
+                // line-height: 15px;
+                // text-align: left;
+                color: #fff;
+                text-transform: uppercase;
                 &:last-child{
                     padding-bottom:0;
+
                 }
             }
         }
     }
     .subscribe{
         padding: 0 0.5rem;
-        
+
         .label{
-            font-size:.9em;
-            margin-bottom:0;
+            // font-size:.9em;
+            font-size: 16px;
+            margin-bottom:.5rem;
             color:#fff;
             @media screen and (min-width:1200px)
             {
@@ -60,12 +69,25 @@
             }
         }
 
+        .label{
+              // // width: 281px;
+              // // height: 9px;
+              // font-family: lato;
+              // font-weight: normal;
+              // font-size: 14px;
+              // // line-height: 20px;
+              // // text-align: left;
+              // color: #fff;
+
+        }
+
         input{
             width:300px;
-            height:35px;
+            height:39px;
             border-radius:5px;
             font-size: 0.9em;
             padding:0.5rem;
+            border: none;
         }
         button{
             // display:block;

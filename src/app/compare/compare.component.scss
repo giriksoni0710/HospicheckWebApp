@@ -1,7 +1,7 @@
 .btndiv{
 
     text-align: center;
-    
+
 .searchbtn{
     display:inline-block;
     margin:2rem auto 1rem;
@@ -15,51 +15,66 @@
     letter-spacing: 1px;
     max-width: 150px;
 
-    
+
   }
 
   #searchbtn1 {
 
-    
+
 margin-right: 0.5rem;
 
   }
 
   #searchbtn2 {
 
-    
+
     margin-right: 0.5rem;
-    
+
       }
 }
 
 .comparehosp{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 100%;
+    max-width: 1170px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
 
 .hospdetailCard{
-    margin: 1rem 1rem 3rem 2rem;
+    margin: 1rem 1rem 3rem 1rem;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0px -1px 3px 3px #dcdcdc;
+    // box-shadow: 0px -1px 3px 3px #dcdcdc;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
     width: 90.5%;
+    justify-self: center;
     // text-align:center;
 
     .hospName{
         display:inline-block;
         width: 80%;
         margin:2rem;
+        margin-left: 0;
+        height: 4rem;
         h5{
             margin:0;
             color:#385398;
             line-height:1.1;
             font-weight:bold;
+            font-family: lato;
+            font-size: 1.5rem;
+            text-align: left;
             // text-align:center;
         }
     }
     .hospReviews{
         width:80%;
-        margin:0 2rem 2rem;
+        // margin:0 2rem 2rem;
+        margin: 2rem;
+        margin-top: 0;
         display:flex;
         flex-flow:row nowrap;
         img{
@@ -110,8 +125,8 @@ margin-right: 0.5rem;
             {
                 padding: 2rem 0 0;
             }
-            
-            
+
+
             &:nth-child(2),&:nth-child(3)
             {
                 padding-top:3rem;
@@ -132,11 +147,18 @@ margin-right: 0.5rem;
             line-height:1.1;
             font-weight:bold;
             text-align:center;
+            font-family: lato;
+            font-size: 1.5rem;
+            text-align: left;
+            padding: 2rem;
         }
         p{
             margin: 1.5rem 0 1rem;
-            font-size: 0.9em;
+            font-size: 1.1rem;
             padding: 0 1rem;
+            font-family: lato;
+            color: #595a5b;
+
             @media screen and (min-width:1000px)
             {
                 padding: 0 0.5rem;
@@ -150,20 +172,26 @@ margin-right: 0.5rem;
             @media screen and (min-width:1000px)
             {
                 display:grid;
-                grid-template-columns:1fr 1fr 1fr;     
+                grid-template-columns:1fr 1fr 1fr;
+                padding-left: 1rem;
+                padding-right: 1rem;
             }
         }
     }
     .hospDepts{
         display:inline-block;
         width: 100%;
-        
+
         h5{
             margin:0;
             color:#385398;
             line-height:1.1;
             font-weight:bold;
             text-align:center;
+            font-family: lato;
+            font-size: 1.5rem;
+            text-align: left;
+            padding: 2rem;
         }
     }
     .hospheadDepts{
@@ -177,15 +205,29 @@ margin-right: 0.5rem;
             padding:2rem;
         }
         div{
-            width:150px;
-            height:55px;
-            font-size:0.8em;
-            border-radius: 37px;
+          width: 169px;
+// height: 42px;
+background: #fff;
+box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+
+font-family: Lato;
+font-weight: 600;
+font-size: 17px;
+letter-spacing: 0.03em;
+// line-height: 28.8px;
+// text-align: left;
+color: #595a5b;
+
+
+            // width:150px;
+            // height:55px;
+            // font-size:0.8em;
+            border-radius: 6px;
             // line-height:50px;
-            border:3px solid #385398;
+            // border:3px solid #385398;
             text-align:center;
             margin: 0 auto 2rem;
-            padding:1rem 0.5rem;
+            padding:.4rem;
             @media screen and (min-width:1000px)
             {
                 flex-grow:1;
