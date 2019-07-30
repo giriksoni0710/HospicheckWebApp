@@ -44,7 +44,7 @@ export class HomeComponent implements OnInit{
         console.log("City is empty");
         return false;
       }
-      
+
        this.http.post(this.url,{searchinput:this.query1,searchcity:this.query2}).toPromise().then(data =>
         {
           this.router.navigate(['/advanced-search'], {queryParams: {searchinput: this.query1,searchcity:this.query2}});
@@ -60,7 +60,7 @@ export class HomeComponent implements OnInit{
 
     async ngOnInit(){
       this.hospNames = await this.http.get('http://localhost:3000/searchQuery').toPromise().then((data)=>{
-        
+
         console.log(data);
         this.mainData = data;
       });
