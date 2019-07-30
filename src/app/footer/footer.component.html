@@ -12,9 +12,11 @@
   </div>
 
   <div class="subscribe">
-    <label for="email" class="label">Stay in touch with us!</label><br>
+    <label for="email" class="label" *ngIf="!abc">Stay in touch with us!</label><br>
+    <label for="thanks" *ngIf="abc" class="label">Thankyou For Subscribing!!</label><br>
     <input name="email" id="email" type="email" placeholder="Email address"><br>
-    <button type="button"><strong>SUBSCRIBE</strong></button>
+    <button type="button" (click)="subscribe()"><strong>SUBSCRIBE</strong></button>
+    
   </div>
   <div class="social-links">
     <ul>
