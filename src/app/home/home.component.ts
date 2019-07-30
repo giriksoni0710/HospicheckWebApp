@@ -52,9 +52,10 @@ export class HomeComponent implements OnInit{
 
     }
 
-    public singleView(hospName:any)
+    async singleView(hospName:any)
     {
-      this.router.navigate(['/single-hospital-view'], {queryParams: {hospName: hospName}});
+      console.log("hello");
+      await this.router.navigate(['/single-hospital-view'], {queryParams: {hospName: hospName}});
     }
 
     async ngOnInit(){
