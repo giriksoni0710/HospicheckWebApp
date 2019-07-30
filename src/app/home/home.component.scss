@@ -1,40 +1,184 @@
 
+.card-section{
+  width: 100%;
+    max-width: 1170px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.reviewChild1:first-child{
+  margin-left: 0;
+}
+@media only screen and (min-width: 707px){
+.reviewHeading{
+  text-align: left;
+}
+}
+
+.reviewHeading{
+  width: 100%;
+    max-width: 1170px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+
+}
+
+@media only screen and (min-width: 1038px){
+  .reviewHeading{
+    text-align: left;
+  }
+}
+
+
+
+
 .banner
 {
   width: 100%;
-  height:660px;
-  background:url('/assets/img/landing-page-banner-image.png');
+  height:610px;
+  background:url('/assets/img/landing-page-banner-image-try.png');
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
+  background-size: cover;
+}
+// nikhil css*******************************
+@media only screen and (min-width: 1300px){
+  .banner{
+    background-position: unset;
+  }
+}
+
+
+
+.container{
+  width: 100%;
+    max-width: 1170px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+@media screen and (min-width:800px){
+.searchdiv{
+  display: grid;
+    grid-template-columns: 2.5fr 2.5fr 1fr;
+
+}
+
+.search1{
+  align-self: center;
+}
+
+.banner .container .search1 .searchhospital{
+  margin-top: 0;
+}
+
+.banner .container .search2 .city{
+  margin-top: 0 !important;
+}
+
+.search2{
+  align-self: center;
+}
+
+#searchBtn{
+  align-self: center;
+}
+
+.banner .searchdiv{
+  height: 259px;
+}
+
+.banner .bannertext{
+  text-align: left;
+  font-size: 2.9rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+
+
+}
+
+
+@media screen and (min-width:970px){
+  .banner .container{
+  padding-top: 4.8rem;
+  }
+}
+
 
   .searchdiv {
-    width:388px;
+    // width:388px;
     // height: 362px;
-    height: 312px;
-    margin: 1rem auto 0;
+    height: 375px;
+    margin-top: 1rem;
     border-radius:8.23px;
     background-color: rgba(236,240,241,0.4);
     text-align: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    // max-width: 76%;
+    margin: auto;
   }
 
   .bannertext{
     text-align:center;
     color: white;
     padding-top: 100px;
+    font-weight: bold;
+    font-family: lato;
+    letter-spacing: 0.05em;
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   input[type="text"]{
     display:block;
     margin:auto;
-    width: 87%;
-    height: 40px;
+    width: 100%;
+    height: 59px;
     // box-shadow: 0 1px 5px 7px rgba(0, 0, 0, 0.1);
     box-shadow:6px 10px 8px 2px rgba(0, 0, 0, 0.1);
     outline: none;
     margin-bottom: 0.5rem;
-    border-radius: 5px;
+    border-radius: 6px;
     padding-left:0.5rem;
+    border: 2px solid #ebeded;
+    margin-top: 0.5rem;
+
   }
+
+  .labelandtext{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .search2{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+
+  .searchbutton{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    align-self: center;
+    margin-top: .5rem;
+  }
+
   // #query1Select{
   //   position: relative;
   //   height: 100px;
@@ -50,7 +194,7 @@
   //   max-width: 500px;
   //   width: 100%;
   // }
-  
+
   // .example-full-width {
   //   // width: 100%;
   //   width: 87%;
@@ -59,20 +203,31 @@
   #searchcity{
     display:block;
     margin:auto;
-    width:87%;
-    height:40px;
+    width:100%;
+    height:59px;
     box-shadow:6px 10px 8px 2px rgba(0, 0, 0, 0.1);
     outline:none;
     margin-bottom: 0.5rem;
-    border-radius: 5px;
+    border-radius: 6px;
     padding-left:0.5rem;
+    border: 2px solid #ebeded;
+    margin-top: 0.5rem;
+
   }
 
   label{
     margin: 0 1.7rem;
-    color: white;
+    font-family: Lato;
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: 0.01em;
+    line-height: 21px;
+    text-align: left;
+    color: #fff;
+
     &:nth-of-type(1){
       margin-top:3rem;
+      margin-left: 0;
     }
   }
 
@@ -91,43 +246,151 @@
   #searchBtn{
     display:block;
     margin:2rem auto 1rem;
-    width:87%;
-    height:40px;
+    width:100%;
+    height:59px;
     border-radius:5px;
     background:#385398;
     border:none;
     color:#fff;
+    font-family: Lato;
     font-weight: bold;
-    letter-spacing: 1px;
+    font-size: 17px;
+    letter-spacing: 0.01em;
+    text-align: center;
+
   }
 
-}
+
 .reviewHeading{
-  text-align:center;
-  margin: 3.5rem 0;
+  // text-align:center;
+  // margin: 3.5rem 0;
 
   h2,h6{
     color:#385398;
+    font-family: lato;
   }
   h6{
     letter-spacing: 2px;
     line-height:1.4;
+    margin-top: 1rem;
   }
 }
+
+
+@media only screen and (min-width: 707px){
+  .card-section .reviewChild1{
+    justify-content: space-between;
+  }
+  .card-section .reviewChild1 .card3{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 1039px){
+  .card-section .reviewChild1 .card3{
+    margin-left: 0;
+    margin-right: 0;
+}
+}
+
+
+.card-section .reviewChild1 .card2{
+  margin-top: 4rem;
+
+}
+@media only screen and (min-width: 707px){
+  .card-section .reviewChild1 .card2{
+    margin: 0;
+  }
+}
+
+.card-section .reviewChild1 .card3{
+  margin-top: 4rem;
+}
+@media only screen and (min-width: 1039px){
+  .card-section .reviewChild1 .card3{
+    margin-top: 0;
+  }
+}
+
+
+// about hospicheck at the bottom************************************************************************
+
+.reviewChild2{
+  margin-top: 7rem;
+}
+@media only screen and (min-width: 707px){
+  .reviewChild2{
+    width: 100%;
+    max-width: 1170px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+}
+
+
+.reviewCard2{
+  width: 330px;
+}
+
+@media only screen and (min-width: 707px){
+  .reviewCard2{
+    width: 100%;
+  }
+
+
+}
+
+
+// about hospicheck at the bottom************************************************************************
 
 
 .reviewChild1{
 
   display:flex;
   flex-flow:row wrap;
+  justify-content: center;
+
+
+
+
+  // // nikhil css*********************************************************************************************
+
+  // @media screen and (min-width: 600px){
+  //   .reviewCard{
+  //     margin-left: 2rem;
+  //     margin-right: 2rem;
+  //   }
+  // }
+
+
+
+
+
+  // // nikhil css*********************************************************************************************
 
   .reviewCard{
     width:330px;
     height:450px;
     // background:Red;
     // text-align:center;
-    margin:0 auto 2rem;
-    box-shadow:0 4px 3px 3px #dcdcdc;
+    // margin:0 auto 2rem;
+
+    // margin-right: 0;
+    // margin-left: auto;
+    // margin-right: auto;
+    // margin-bottom: 3.5rem;
+    // margin-top: 3.5rem;
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.16);
+
 
     .reviewImg{
 
@@ -175,6 +438,7 @@
       overflow:hidden;
       -webkit-text-overflow: ellipsis;
       text-overflow: ellipsis;
+
     }
 
   }
@@ -182,30 +446,36 @@
 
 .reviewCard2{
   // width:330px;
-  width: 68.05%;
+  // width: 68.05%;
   @media screen and (min-width:1000px)
   {
-    width: 80%;
+    width: 100%;
   }
-  height:auto;
-  margin:0 auto 2rem;
-  box-shadow:0 4px 3px 3px #dcdcdc;
+  height: auto;
+  margin: 0 auto 2rem;
+  box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.16);
+  border-radius: 12px;
+  margin-bottom: 7rem;
 
   .reviewImg2{
     display:inline-block;
     width: 90%;
-    height: 190px;
-    max-height:300px;
+    height: 150px;
+    // max-height:400px;
     margin: 1rem 5% 0;
-    padding-top: 0.5rem;
-    @media screen and (min-width:640px)
+    margin-top: 3.5rem;
+    // padding-top: 3.5rem;
+    // padding-top: 0.5rem;
+    @media screen and (min-width:707px)
     {
+      height: auto;
+      padding: 3rem;
       padding-top: 0;
     }
-    @media screen and (min-width:1000px)
-    {
-      height: 400px;
-    }
+    // @media screen and (min-width:1000px)
+    // {
+    //   height: 400px;
+    // }
     // margin: 2rem 5% 0;
     // text-align: center;
     // background: red;
@@ -221,6 +491,14 @@
     }
   }
   .reviewBody2{
+    font-family: Lato;
+    font-weight: normal;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    line-height: 26px;
+    text-align: left;
+    color: #828385;
+
     // width:90%;
     // height:auto;
     // display:inline-block;
@@ -229,17 +507,73 @@
     height: auto;
     margin: 0 auto;
     padding: 0 1.5rem 1.5rem;
-    @media screen and (min-width:640px)
+      padding-bottom: 3.5rem;
+      padding-top: 3.5rem;
+      // padding-top: 3.5rem;
+    @media screen and (min-width:707px)
     {
-      padding:1.5rem;
+      padding-top: 0;
+    //   padding-left: 4.5rem;
+    // padding-right: 4.5rem;
+
+      width: 80%;
+
     }
     @media screen and (min-width:1000px)
     {
-      padding:1.5rem 5rem;
+      // padding:1.5rem 5rem;
+      padding-top: 0;
+      width:70%;
     }
     @media screen and (min-width:1350px)
     {
-      padding:1.5rem 8rem;
+      // padding:1.5rem 8rem;
     }
   }
+}
+
+
+.reviewImg2{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Lato;
+font-weight: bold;
+font-size: 14px;
+letter-spacing: .05em;
+color: #fff;
+width: 100%
+
+}
+@media screen and (min-width:707px){
+  .centered{
+    font-size: 1.2rem;
+  }
+}
+
+.diagonal-background{
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: #ECF0F1;
+}
+.diagonal-background:after{
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: #ECF0F1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transform-origin: top right;
+  transform: skewY(-4deg);
 }

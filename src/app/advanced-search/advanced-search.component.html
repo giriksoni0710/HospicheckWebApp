@@ -11,21 +11,21 @@
 
 
 <i class="fa fa-filter"></i>
-<h5>Narrow your results</h5>
+<h5 class="narrow">Narrow your results</h5>
 
 </div>
 
 <div class="difffilters" *ngIf="showhide">
 
     <div class="type">
-    <label for="" style="background-color: slategray;"> Type </label><br>
+    <label for="" style="background-color: #ECF0F1;"> Type </label><br>
       <input type="radio" name="hospCategory" value="hospital" class="hospital" #hospital> <span>Hospital</span><br>
       <input type="radio" name="hospCategory" value="walkin" class="walkinclinic" #walkin> <span>Walk in Clinics</span>
 
 
     </div>
     <div class="location type">
-        <label for="" style="background-color: slategray;"> Location </label><br>
+        <label for="" style="background-color:#ECF0F1;"> Location </label><br>
         <input type="checkbox" name="" value="vancouver" #vancouver class="hospital"> <span>Vancouver</span><br>
         <input type="checkbox" name="" value="burnaby" #burnaby class="walkinclinic"> <span>Burnaby</span><br>
         <input type="checkbox" name="" value="surrey" #surrey class="walkinclinic"> <span>Surrey</span><br>
@@ -39,7 +39,7 @@
 
     <div class="department type">
 
-        <label for="" style="background-color: slategray;"> Department </label><br>
+        <label for="" style="background-color: #ECF0F1;"> Department </label><br>
         <input type="checkbox" name="" value="cardiology" #cardiology class="hospital"> <span>Cardiology</span><br>
         <input type="checkbox" name="" value="neurology" #neurology class="walkinclinic"> <span>Neurology</span><br>
         <input type="checkbox" name="" value="general surgery" #general class="hospital"> <span>General Surgery</span><br>
@@ -57,7 +57,7 @@
 
   </div>
 
-<div class="2ndgrid" style="padding-right: 2rem;">
+<div class="2ndgrid" >
 
 <div class="display-results">
 
@@ -69,21 +69,21 @@
 
   <p> choose upto 2 hospitals to compare</p>
 
-  
+
   <div *ngIf="comparepressed" class="hospNameCompare">
 
-  
+
 
     <div class="comp-div-1">{{ abc.textContent }}</div>
 
     <div class="comp-div-2">{{ xyz.textContent }}</div>
-  
+
   </div>
-  
+
   <div>
 
   <button class="compare-btn" (click)="compareData()"> Compare </button>
-    
+
 
 
 </div>
@@ -91,7 +91,7 @@
 
 </div>
 <div class="hospital-cards" *ngFor="let data of maindata">
-   
+
   <div class="starrating">
   <h5 class="hospitalname" ng-model="hospitalname" #cmp>  {{ data.hospName }}  </h5>
 
