@@ -29,9 +29,15 @@
 .about-content{
     .about-heading{
         // margin: 0 auto;
-        text-align:center;
-        color:blue;
-        letter-spacing:0.5px;
+        // text-align:center;
+        // color:blue;
+        // letter-spacing:0.5px;
+        font-family: Lato;
+        font-weight: normal;
+        font-size: 2rem;
+        letter-spacing: -0.01em;
+        text-align: CENTER;
+        color: #385398;
     }
     p{
         font-family: 'Lato', sans-serif;
@@ -39,6 +45,14 @@
         line-height:1.8;
         letter-spacing:0.5px;
         padding: 0 4rem;
+        // width: 847px; */
+    /* height: 344px; */
+    font-family: Lato;
+    font-weight: normal;
+    letter-spacing: 0.03em;
+    line-height: 40px;
+    text-align: left;
+    color: #828385;
         @media screen and (min-width:720px){
             padding: 0 6rem;
         }
@@ -108,7 +122,25 @@
                     color:#70f;
                 }
             }
-            
+
         }
     }
+}
+
+
+.about-container{
+  margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.about-banner{
+  background: url(/assets/img/about-image.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+
+.about-heading{
+
 }

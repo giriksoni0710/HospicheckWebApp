@@ -1,14 +1,16 @@
 
 <div class="banner">
-  <h2 class="bannertext" >Find the right hospital
-    <br> Get the best care</h2>
+  <div class="container">
+  <h2 class="bannertext" >Find the right hospital. Get the best care</h2>
   <!-- <h2 class="bannertext" >{{query1}} {{query2}}</h2> -->
 
   <div class="searchdiv">
 
-    <div>
-      <label for="SearchHospital"> Search department or procedure  </label>
+    <div class="search1">
+      <div class="labelandtext">
+      <label for="SearchHospital" class="searchhospital"> Search department or procedure  </label>
       <input type="text" id="searchinput" placeholder="(Optional)" [(ngModel)]="query1">
+    </div>
       <!-- <select type="text" id="query1Select" multiple>
       </select> -->
       <!-- <form class="example-form">
@@ -22,7 +24,7 @@
           </mat-form-field>
         </form> -->
     </div>
-    <div>
+    <div class="search2">
       <label for="City" class="city"> Select City</label>
       <!-- <input type="text" id="searchcity" [(ngModel)]="query2"><br> -->
       <select name="city" id="searchcity" [(ngModel)]="query2">
@@ -37,8 +39,11 @@
       <!-- <input type="radio" value="Hospital" name="checked"> <span class="radiobtntxt">Hospital</span> -->
       <!-- <input type="radio" value="Walk In Clinic" name="checked"> <span class="radiobtntxt">Walk In Clinic</span> -->
     <!-- </div> -->
+    <div class="searchbutton">
     <button type="button" id="searchBtn" (click)="post()">SEARCH</button>
   </div>
+  </div>
+</div>
 
 </div>
 
@@ -46,9 +51,10 @@
   <h2>Hospital Reviews</h2>
   <h6>Sharing your experience can help someone<br>to get the care they need.</h6>
 </div>
-<div class="reviewCard-parent">
+<div class="reviewCard-parent card-section">
   <div class="reviewChild1" #reviewChild1>
     <div class="reviewCard" *ngFor="let main of mainData" (click)="singleView(main.hospName)">
+
       <div class="reviewImg">
         <img src="./assets/img/reviewHome1.png" alt="Review home image1">
       </div>
@@ -63,7 +69,8 @@
       <div class="reviewBody">Nothing unpleasant happened in five sessions that we had to be there and we received adequate level... Read More</div>
     </div>
 
-    <!-- <div class="reviewCard">
+    <div class="reviewCard card2">
+
       <div class="reviewImg">
         <img src="./assets/img/reviewHome2.png" alt="Review home image2">
       </div>
@@ -76,7 +83,7 @@
       <div class="reviewBody">Nothing unpleasant happened in five sessions that we had to be there and we received adequate level... Read More</div>
     </div>
 
-    <div class="reviewCard">
+    <div class="reviewCard card3">
       <div class="reviewImg">
         <img src="./assets/img/reviewHome3.png" alt="Review home image3">
       </div>
@@ -89,11 +96,16 @@
     </div> -->
 
   </div>
+</div>
+
+
+<div class="diag">
   <div class="reviewChild2">
     <div class="reviewCard2">
       <div class="reviewImg2">
         <!-- <img src="./assets/img/hospiBed.png" alt="Review Home image4"> -->
-        <img src="./assets/img/reviwHome5.png" alt="Review Home image5">
+        <img src="./assets/img/reviwHome6.png" alt="Review Home image5">
+        <div class="centered">- Choosing the best hospital for you -</div>
       </div>
       <div class="reviewBody2">
           A hospital comparison web app which compares treatments
@@ -107,5 +119,11 @@
           our application lists the best treatments available to the user based on a search term.
       </div>
     </div>
+
   </div>
-</div>
+
+  <!-- <div class="diagonal-background">
+
+    </div>
+  </div> -->
+
