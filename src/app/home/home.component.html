@@ -51,18 +51,18 @@
   <h2>Hospital Reviews</h2>
   <h6>Sharing your experience can help someone<br>to get the care they need.</h6>
 </div>
-
-
-
 <div class="reviewCard-parent card-section">
-  <div class="reviewChild1">
-    <div class="reviewCard card1">
+  <div class="reviewChild1" #reviewChild1>
+    <div class="reviewCard" *ngFor="let main of mainData" (click)="singleView(main.hospName)">
+
       <div class="reviewImg">
         <img src="./assets/img/reviewHome1.png" alt="Review home image1">
       </div>
+      <!-- <div class="reviewImg">
+        <img src="" alt="Review home image1">
+      </div> -->
       <div class="reviewFor">Review for</div>
-      <div class="hospClinicName">Jim Pattison Outpatient Care
-          and Surgery Centre</div>
+      <div class="hospClinicName">{{main.hospName}}</div>
       <div class="ratings">
         <img src="./assets/img/rating.png" alt="Ratings">
       </div>
@@ -70,12 +70,13 @@
     </div>
 
     <div class="reviewCard card2">
+
       <div class="reviewImg">
         <img src="./assets/img/reviewHome2.png" alt="Review home image2">
       </div>
       <div class="reviewFor">Review for</div>
-      <div class="hospClinicName">Jim Pattison Outpatient Care
-          and Surgery Centre</div>
+      <div class="hospClinicName">Vancouver General Hospital - Willow Pavillion 
+      </div>
       <div class="ratings">
         <img src="./assets/img/rating.png" alt="Ratings">
       </div>
@@ -87,13 +88,13 @@
         <img src="./assets/img/reviewHome3.png" alt="Review home image3">
       </div>
       <div class="reviewFor">Review for</div>
-      <div class="hospClinicName">Jim Pattison Outpatient Care
-          and Surgery Centre</div>
+      <div class="hospClinicName">Surrey Memorial Hospital</div>
       <div class="ratings">
         <img src="./assets/img/rating.png" alt="Ratings">
       </div>
       <div class="reviewBody">Nothing unpleasant happened in five sessions that we had to be there and we received adequate level... Read More</div>
-    </div>
+    </div> -->
+
   </div>
 </div>
 
