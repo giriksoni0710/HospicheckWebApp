@@ -34,50 +34,50 @@ this.hospCheck = '';
 
    this.compareTable= true;
     this.barGraph = false;
-
+    
     let query1 = this.route.snapshot.queryParamMap.get('hosp1');
 
     let query2 = this.route.snapshot.queryParamMap.get('hosp2');
 
     let hospCheck = this.route.snapshot.queryParamMap.get('hospCheck1');
     console.log(hospCheck);
-
+    
     if(hospCheck == null){
 
         hospCheck = "true";
     }
     else{
-
+    
       hospCheck = this.route.snapshot.queryParamMap.get('hospCheck1').toString();
 
     }
     // console.log(hospCheck);
-
+ 
     this.http.post("http://localhost:3000/searchQuery2", {searchcity1: query1.toString(), searchcity2: query2.toString(), hospCheck: hospCheck}).toPromise().then(data=>{
 
-    console.log(hospCheck);
+    console.log(hospCheck);  
     this.maindata = data;
-
+    
     })
-
+    
 
 
   }
   // count=0;
-
+  
   public count =0
   displayData1() {
 
-
+    
     this.compareTable = true;
-    this.barGraph = false;
+    this.barGraph = false; 
 
     if(this.count>0){
 
 
       rectCanvas.parentNode.removeChild(rectCanvas);
       this.count=0;
-
+      
 
     }
 
@@ -88,26 +88,26 @@ this.hospCheck = '';
     // rectCanvas.parentNode.removeChild(rectCanvas);
     // this.count = 1;
     // }
+    
 
-
-
-
+    
+    
   }
 
   displayData2(){
-
+    
     // this.count = 1;
     // this.count+=1;
-
+    
     this.barGraph = true;
     this.compareTable = false;
 // if(this.count===1){
-  if(this.count==0){
+  if(this.count==0){    
     this.d3view();
     this.count++;
     }
 
-
+    
     // this.count=0;
   // }
   }
@@ -128,10 +128,10 @@ if(this.count % 2 == 0)
   let cwidth = 500 - margin.left - margin.right;
   let cHeight = 400 - margin.top - margin.bottom;
 
-  let scale = d3.scaleLinear()
-    .domain([0,5])
+  let scale = d3.scaleLinear() 
+    .domain([0,5]) 
     .range([cHeight, 0]);
-
+    
     this.maindata.sort((obj1, obj2)=>{
         return obj1.rating - obj2.rating;
     })
@@ -155,7 +155,7 @@ if(this.count % 2 == 0)
       .ticks(this.maindata.rating)
       .tickFormat((d)=>{
         return d + " star";
-      });
+      });    
 
   let svg = d3.select('.Main-Compare')
     .append('svg')
@@ -163,10 +163,10 @@ if(this.count % 2 == 0)
         .attr('width', cwidth+margin.left+margin.right)
         .attr('height', '480px')
         .style('margin-top','2rem');
-
+    
   // console.log(this.maindata);
-
-    let g = svg.append("g")
+        
+    let g = svg.append("g")     
             .attr("transform", `translate(${ margin.left }, ${margin.top})`);
 
     g.append('g')
@@ -177,24 +177,25 @@ if(this.count % 2 == 0)
         .attr("x", "-5")
         .attr("y", "10")
         .attr("text-anchor", "end")
+        .attr("font-size", "14px")
         .attr("transform", "rotate(-40)");
 
 
     g.append('g')
         .attr("class", "y-axis")
-          .call(yAxis);
-
+          .call(yAxis);  
+          
     g.append('text')
       .attr("class", "x-axis-label")
-      .attr("x", cwidth/2)
-      .attr("y", cHeight + 180)
+      .attr("x", cwidth/2 + 180)   
+      .attr("y", cHeight + 50)
       .attr("font-size", "20px")
       .attr("text-anchor", "middle")
       .text("Hospital/Clinic Name");
-
+      
     g.append('text')
       .attr("class", "y-axis-label")
-      .attr("x", -(cHeight/2))
+      .attr("x", -(cHeight/2))   
       .attr("y", -60)
       .attr("font-size", "20px")
       .attr("text-anchor", "middle")
@@ -221,7 +222,8 @@ if(this.count % 2 == 0)
             .attr('height', (maindata,i)=>{
               return cHeight - scale(this.maindata[i].rating);
             })
-            .attr('fill','orangered');
+            // .attr('fill','orangered');      
+            .attr('fill','yellowgreen');      
     this.count+=1;
     }
   }
