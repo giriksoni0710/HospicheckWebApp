@@ -39,6 +39,27 @@ margin-right: 0.5rem;
       }
 }
 
+.Main-Compare{
+    width: 100%;
+    max-width: 1170px;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0px 7px 20px rgba(0, 0, 0, 0.16);
+    margin-bottom: 3.5rem;
+    border-radius: 8px;
+    margin-top: 3.5rem;
+    background-color: #ECF0F1;
+}
+
+#rectCanvas{
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
 .comparehosp{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -57,6 +78,9 @@ margin-right: 0.5rem;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
     width: 90.5%;
     justify-self: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: white;
     // text-align:center;
 
     .hospName{

@@ -53,7 +53,7 @@ this.hospCheck = '';
     }
     // console.log(hospCheck);
  
-    this.http.post("http://localhost:3000/searchQuery2", {searchcity1: query1.toString(), searchcity2: query2.toString(), hospCheck: hospCheck}).toPromise().then(data=>{
+    this.http.post("http://giriksoni.com/projects/hospicheck/searchQuery2", {searchcity1: query1.toString(), searchcity2: query2.toString(), hospCheck: hospCheck}).toPromise().then(data=>{
 
     console.log(hospCheck);  
     this.maindata = data;
@@ -75,8 +75,14 @@ this.hospCheck = '';
     if(this.count>0){
 
 
-      rectCanvas.parentNode.removeChild(rectCanvas);
+    
+      
+      // rectCanvas.parentNode.removeChild(rectCanvas);
+      
+        
       this.count=0;
+    
+
       
 
     }

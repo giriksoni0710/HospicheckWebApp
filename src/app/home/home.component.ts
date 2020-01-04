@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit{
     this.query2 = '';
     this.mainData = [];
     this.imagePath = [];
-    this.url = "http://localhost:3000/searchQuery";
+    this.url = "http://giriksoni.com/projects/hospicheck/searchQuery";
   }
 
   // @Output() deptEvent = new EventEmitter<any>();
@@ -59,7 +59,7 @@ export class HomeComponent implements OnInit{
     }
 
     async ngOnInit(){
-      this.hospNames = await this.http.get('http://localhost:3000/searchQuery').toPromise().then((data)=>{
+      this.hospNames = await this.http.get('http://giriksoni.com/projects/hospicheck/searchQuery').toPromise().then((data)=>{
 
         console.log(data);
         this.mainData = data;
