@@ -144,7 +144,7 @@
     .hospheadDepts{
         width:100%;
         display:grid;
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:1fr;
         @media screen and (min-width:1000px)
         {
             display:flex;
